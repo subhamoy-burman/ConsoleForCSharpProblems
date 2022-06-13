@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?><AppiumAUT><XCUIElementTypeApplication type="XCUIElementTypeApplication" name="MCL Heart" label="MCL Heart" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+    <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                                            <XCUIElementTypeOther type="XCUIElementTypeOther" name="AIMessagesInboxView" enabled="true" visible="true" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="44" width="375" height="768" index="0">
+                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="44" width="375" height="734" index="0">
+                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" name="toolbar" enabled="true" visible="true" accessible="false" x="0" y="44" width="375" height="112" index="0">
+                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="44" width="148" height="44" index="0">
+                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="50" width="148" height="38" index="0">
+                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="16" y="50" width="57" height="38" index="0">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="16" y="58" width="12" height="21" index="0">
+                                                                            <XCUIElementTypeImage type="XCUIElementTypeImage" enabled="true" visible="false" accessible="false" x="16" y="58" width="12" height="21" index="0"/>
+                                                                        </XCUIElementTypeOther>
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" name="button_Back_Container" enabled="true" visible="true" accessible="false" x="38" y="60" width="35" height="18" index="1">
+                                                                            <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Back" name="button_Back" label="Back" enabled="true" visible="true" accessible="true" x="38" y="60" width="35" height="18" index="0"/>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeOther>
+                                                                </XCUIElementTypeOther>
+                                                            </XCUIElementTypeOther>
+                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" name="button_send_transmission_Container" enabled="true" visible="true" accessible="false" x="215" y="44" width="140" height="44" index="1">
+                                                                <XCUIElementTypeButton type="XCUIElementTypeButton" name="button_send_transmission" label="Send Transmission" enabled="true" visible="true" accessible="true" x="215" y="44" width="140" height="44" index="0">
+                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Send Transmission" name="Send Transmission" label="Send Transmission" enabled="true" visible="true" accessible="false" x="220" y="57" width="130" height="18" index="0"/>
+                                                                </XCUIElementTypeButton>
+                                                            </XCUIElementTypeOther>
+                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="16" y="110" width="353" height="34" index="2">
+                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="monitoring_main_title_Container" enabled="true" visible="true" accessible="false" x="16" y="110" width="130" height="34" index="0">
+                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Messages" name="monitoring_main_title" label="Messages" enabled="true" visible="true" accessible="true" x="16" y="110" width="130" height="34" index="0"/>
+                                                                </XCUIElementTypeOther>
+                                                            </XCUIElementTypeOther>
+                                                        </XCUIElementTypeOther>
+                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="159" width="375" height="615" index="1">
+                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="159" width="375" height="615" index="0">
+                                                                <XCUIElementTypeCollectionView type="XCUIElementTypeCollectionView" enabled="true" visible="true" accessible="false" x="0" y="159" width="375" height="615" index="0">
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="false" accessible="false" x="0" y="4" width="375" height="99" index="0">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="4" width="375" height="99" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="4" width="375" height="99" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_9_Container" enabled="true" visible="false" accessible="false" x="11" y="19" width="14" height="15" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_14" enabled="true" visible="false" accessible="false" x="11" y="19" width="14" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_9_Container" enabled="true" visible="false" accessible="false" x="37" y="19" width="220" height="15" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_14" label="IMPORTANT" enabled="true" visible="false" accessible="true" x="37" y="19" width="220" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="271" y="19" width="93" height="15" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_9_Container" enabled="true" visible="false" accessible="false" x="271" y="19" width="73" height="15" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Apr 03, 2016" name="messagelist_message_label_createdon_14" label="Apr 03, 2016" enabled="true" visible="false" accessible="true" x="271" y="19" width="73" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_9_Container" enabled="true" visible="false" accessible="false" x="348" y="19" width="12" height="15" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_14" enabled="true" visible="false" accessible="true" x="348" y="19" width="12" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_9_Container" enabled="true" visible="false" accessible="false" x="39" y="43" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_14" label="Transmission received" enabled="true" visible="false" accessible="true" x="39" y="43" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_9_Container" enabled="true" visible="false" accessible="false" x="39" y="66" width="321" height="16" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_14" label="Your transmission was successfully received by your clinic." enabled="true" visible="false" accessible="true" x="39" y="66" width="321" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="35" y="101" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="102" width="375" height="98" index="1">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="102" width="375" height="98" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="102" width="375" height="98" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_6_Container" enabled="true" visible="false" accessible="false" x="11" y="117" width="14" height="15" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_15" enabled="true" visible="false" accessible="false" x="11" y="117" width="14" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_6_Container" enabled="true" visible="false" accessible="false" x="37" y="117" width="220" height="15" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_15" label="IMPORTANT" enabled="true" visible="false" accessible="true" x="37" y="117" width="220" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="271" y="117" width="93" height="15" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_6_Container" enabled="true" visible="false" accessible="false" x="271" y="117" width="73" height="15" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Mar 01, 2016" name="messagelist_message_label_createdon_15" label="Mar 01, 2016" enabled="true" visible="false" accessible="true" x="271" y="117" width="73" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_6_Container" enabled="true" visible="false" accessible="false" x="348" y="117" width="12" height="15" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_15" enabled="true" visible="false" accessible="true" x="348" y="117" width="12" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_6_Container" enabled="true" visible="false" accessible="false" x="39" y="141" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_15" label="Transmission received" enabled="true" visible="false" accessible="true" x="39" y="141" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_6_Container" enabled="true" visible="true" accessible="false" x="39" y="164" width="321" height="15" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_15" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="164" width="321" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="35" y="198" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="199" width="375" height="99" index="2">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="199" width="375" height="99" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="199" width="375" height="99" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_8_Container" enabled="true" visible="true" accessible="false" x="11" y="214" width="14" height="16" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_16" enabled="true" visible="true" accessible="false" x="11" y="214" width="14" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_8_Container" enabled="true" visible="true" accessible="false" x="37" y="214" width="224" height="16" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_16" label="IMPORTANT" enabled="true" visible="true" accessible="true" x="37" y="214" width="224" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="275" y="214" width="89" height="16" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_8_Container" enabled="true" visible="true" accessible="false" x="275" y="214" width="69" height="16" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Jul 20, 2015" name="messagelist_message_label_createdon_16" label="Jul 20, 2015" enabled="true" visible="true" accessible="true" x="275" y="214" width="69" height="16" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_8_Container" enabled="true" visible="true" accessible="false" x="348" y="214" width="12" height="16" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_16" enabled="true" visible="true" accessible="true" x="348" y="214" width="12" height="16" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_8_Container" enabled="true" visible="true" accessible="false" x="39" y="239" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_16" label="Transmission received" enabled="true" visible="true" accessible="true" x="39" y="239" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_8_Container" enabled="true" visible="true" accessible="false" x="39" y="262" width="321" height="15" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_16" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="262" width="321" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="35" y="296" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="297" width="375" height="99" index="3">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="297" width="375" height="99" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="297" width="375" height="99" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_5_Container" enabled="true" visible="true" accessible="false" x="11" y="312" width="14" height="15" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_17" enabled="true" visible="true" accessible="false" x="11" y="312" width="14" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_5_Container" enabled="true" visible="true" accessible="false" x="37" y="312" width="225" height="15" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_17" label="IMPORTANT" enabled="true" visible="true" accessible="true" x="37" y="312" width="225" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="276" y="312" width="88" height="15" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_5_Container" enabled="true" visible="true" accessible="false" x="276" y="312" width="68" height="15" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Jul 27, 2014" name="messagelist_message_label_createdon_17" label="Jul 27, 2014" enabled="true" visible="true" accessible="true" x="276" y="312" width="68" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_5_Container" enabled="true" visible="true" accessible="false" x="348" y="312" width="12" height="15" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_17" enabled="true" visible="true" accessible="true" x="348" y="312" width="12" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_5_Container" enabled="true" visible="true" accessible="false" x="39" y="336" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_17" label="Transmission received" enabled="true" visible="true" accessible="true" x="39" y="336" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_5_Container" enabled="true" visible="true" accessible="false" x="39" y="359" width="321" height="16" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_17" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="359" width="321" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="35" y="394" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="395" width="375" height="98" index="4">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="395" width="375" height="98" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="395" width="375" height="98" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_1_Container" enabled="true" visible="true" accessible="false" x="11" y="410" width="14" height="15" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_18" enabled="true" visible="true" accessible="false" x="11" y="410" width="14" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_1_Container" enabled="true" visible="true" accessible="false" x="37" y="410" width="226" height="15" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_18" label="IMPORTANT" enabled="true" visible="true" accessible="true" x="37" y="410" width="226" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="276" y="410" width="89" height="15" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_1_Container" enabled="true" visible="true" accessible="false" x="276" y="410" width="69" height="15" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Jul 27, 2013" name="messagelist_message_label_createdon_18" label="Jul 27, 2013" enabled="true" visible="true" accessible="true" x="276" y="410" width="69" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_1_Container" enabled="true" visible="true" accessible="false" x="348" y="410" width="13" height="15" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_18" enabled="true" visible="true" accessible="true" x="348" y="410" width="13" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_1_Container" enabled="true" visible="true" accessible="false" x="39" y="434" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_18" label="Transmission received" enabled="true" visible="true" accessible="true" x="39" y="434" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_1_Container" enabled="true" visible="true" accessible="false" x="39" y="457" width="321" height="15" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_18" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="457" width="321" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="35" y="491" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="492" width="375" height="99" index="5">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="492" width="375" height="99" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="492" width="375" height="99" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_7_Container" enabled="true" visible="true" accessible="false" x="11" y="507" width="14" height="16" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_19" enabled="true" visible="true" accessible="false" x="11" y="507" width="14" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_7_Container" enabled="true" visible="true" accessible="false" x="37" y="507" width="224" height="16" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_19" label="IMPORTANT" enabled="true" visible="true" accessible="true" x="37" y="507" width="224" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="274" y="507" width="90" height="16" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_7_Container" enabled="true" visible="true" accessible="false" x="274" y="507" width="70" height="16" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Jul 20, 2013" name="messagelist_message_label_createdon_19" label="Jul 20, 2013" enabled="true" visible="true" accessible="true" x="274" y="507" width="70" height="16" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_7_Container" enabled="true" visible="true" accessible="false" x="347" y="507" width="13" height="16" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_19" enabled="true" visible="true" accessible="true" x="347" y="507" width="13" height="16" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_7_Container" enabled="true" visible="true" accessible="false" x="39" y="532" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_19" label="Transmission received" enabled="true" visible="true" accessible="true" x="39" y="532" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_7_Container" enabled="true" visible="true" accessible="false" x="39" y="555" width="321" height="15" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_19" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="555" width="321" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="35" y="589" width="341" height="2" index="5"/>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="false" x="0" y="590" width="375" height="97" index="6">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="590" width="375" height="97" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="590" width="375" height="97" index="0">
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_4_Container" enabled="true" visible="true" accessible="false" x="11" y="605" width="14" height="15" index="0">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_unreadflag_20" enabled="true" visible="true" accessible="false" x="11" y="605" width="14" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_urgency_4_Container" enabled="true" visible="true" accessible="false" x="37" y="605" width="222" height="15" index="1">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="IMPORTANT" name="messagelist_message_label_urgency_20" label="IMPORTANT" enabled="true" visible="true" accessible="true" x="37" y="605" width="222" height="15" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="273" y="605" width="91" height="15" index="2">
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_createdon_4_Container" enabled="true" visible="true" accessible="false" x="273" y="605" width="71" height="15" index="0">
+                                                                                        <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Apr 27, 2012" name="messagelist_message_label_createdon_20" label="Apr 27, 2012" enabled="true" visible="true" accessible="true" x="273" y="605" width="71" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_image_arrow_4_Container" enabled="true" visible="true" accessible="false" x="348" y="605" width="12" height="15" index="1">
+                                                                                        <XCUIElementTypeImage type="XCUIElementTypeImage" name="messagelist_message_image_arrow_20" enabled="true" visible="true" accessible="true" x="348" y="605" width="12" height="15" index="0"/>
+                                                                                    </XCUIElementTypeOther>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_title_4_Container" enabled="true" visible="true" accessible="false" x="39" y="629" width="337" height="18" index="3">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Transmission received" name="messagelist_message_label_title_20" label="Transmission received" enabled="true" visible="true" accessible="true" x="39" y="629" width="337" height="18" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                                <XCUIElementTypeOther type="XCUIElementTypeOther" name="messagelist_message_label_preview_4_Container" enabled="true" visible="true" accessible="false" x="39" y="652" width="321" height="16" index="4">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Your transmission was successfully received by your clinic." name="messagelist_message_label_preview_20" label="Your transmission was successfully received by your clinic." enabled="true" visible="true" accessible="true" x="39" y="652" width="321" height="16" index="0"/>
+                                                                                </XCUIElementTypeOther>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeCell>
+                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="685" width="375" height="101" index="7">
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="1" y="686" width="375" height="6" index="0">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="1" y="686" width="375" height="6" index="0"/>
+                                                                        </XCUIElementTypeOther>
+                                                                        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="1" y="696" width="375" height="91" index="1">
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" name="indicator_load_more_Container" enabled="true" visible="true" accessible="false" x="1" y="696" width="375" height="91" index="0"/>
+                                                                            <XCUIElementTypeOther type="XCUIElementTypeOther" name="button_load_more_Container" enabled="true" visible="true" accessible="false" x="113" y="721" width="150" height="41" index="1">
+                                                                                <XCUIElementTypeButton type="XCUIElementTypeButton" name="button_load_more" label="Load More" enabled="true" visible="true" accessible="true" x="113" y="721" width="150" height="41" index="0">
+                                                                                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Load More" name="Load More" label="Load More" enabled="true" visible="true" accessible="false" x="151" y="732" width="74" height="19" index="0"/>
+                                                                                </XCUIElementTypeButton>
+                                                                            </XCUIElementTypeOther>
+                                                                        </XCUIElementTypeOther>
+                                                                    </XCUIElementTypeOther>
+                                                                    <XCUIElementTypeOther type="XCUIElementTypeOther" value="0%" name="Horizontal scroll bar, 1 page" label="Horizontal scroll bar, 1 page" enabled="true" visible="true" accessible="false" x="0" y="740" width="375" height="31" index="8"/>
+                                                                </XCUIElementTypeCollectionView>
+                                                            </XCUIElementTypeOther>
+                                                        </XCUIElementTypeOther>
+                                                    </XCUIElementTypeOther>
+                                                </XCUIElementTypeOther>
+                                            </XCUIElementTypeOther>
+                                        </XCUIElementTypeOther>
+                                    </XCUIElementTypeOther>
+                                </XCUIElementTypeOther>
+                            </XCUIElementTypeOther>
+                        </XCUIElementTypeOther>
+                    </XCUIElementTypeOther>
+                </XCUIElementTypeOther>
+            </XCUIElementTypeOther>
+        </XCUIElementTypeOther>
+    </XCUIElementTypeWindow>
+    <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="1">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="0">
+            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="false" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="0">
+                    <XCUIElementTypeImage type="XCUIElementTypeImage" name="logo_medtronic_title" enabled="false" visible="false" accessible="false" x="29" y="69" width="108" height="18" index="0"/>
+                    <XCUIElementTypeImage type="XCUIElementTypeImage" name="logo_mcl_heart_splash" enabled="true" visible="false" accessible="false" x="15" y="296" width="343" height="28" index="1"/>
+                </XCUIElementTypeOther>
+            </XCUIElementTypeOther>
+        </XCUIElementTypeOther>
+    </XCUIElementTypeWindow>
+    <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="2">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="0">
+            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="375" height="812" index="0"/>
+            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="812" width="375" height="233" index="1"/>
+        </XCUIElementTypeOther>
+    </XCUIElementTypeWindow>
+</XCUIElementTypeApplication></AppiumAUT>

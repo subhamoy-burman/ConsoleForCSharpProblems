@@ -1,0 +1,23 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3b6dabce_002Da666_002D4004_002Dab78_002Dabc628182bb5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7fd870bb_002De9da_002D4f81_002D8986_002Def8c002cb594/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad74680c_002D1f87_002D4466_002Da04b_002Db890c1f57a5e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=db37c129_002D389e_002D4b69_002D827b_002D3b36d85567f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestFindLongestSubstringWithKDistinct2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

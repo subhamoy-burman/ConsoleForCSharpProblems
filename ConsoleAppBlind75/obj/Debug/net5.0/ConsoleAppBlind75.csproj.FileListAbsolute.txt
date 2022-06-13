@@ -1,0 +1,15 @@
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ConsoleAppBlind75.deps.json
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ConsoleAppBlind75.runtimeconfig.json
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ConsoleAppBlind75.runtimeconfig.dev.json
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ConsoleAppBlind75.dll
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ref/ConsoleAppBlind75.dll
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/bin/Debug/net5.0/ConsoleAppBlind75.pdb
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.csproj.AssemblyReference.cache
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.GeneratedMSBuildEditorConfig.editorconfig
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.AssemblyInfoInputs.cache
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.AssemblyInfo.cs
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.csproj.CoreCompileInputs.cache
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.dll
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ref/ConsoleAppBlind75.dll
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.pdb
+/Users/burmas3/CodePractices/ConsoleAppBlind75/ConsoleAppBlind75/obj/Debug/net5.0/ConsoleAppBlind75.genruntimeconfig.cache
