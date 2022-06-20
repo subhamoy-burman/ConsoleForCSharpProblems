@@ -5,6 +5,11 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=778fe5fe_002D4323_002D43bc_002D91b0_002Df2a263cb9887/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FindLongestSubarrayOfOneAfterReplacementTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubarrayOfOneAfterReplacementTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7fd870bb_002De9da_002D4f81_002D8986_002Def8c002cb594/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum1&lt;/TestId&gt;
@@ -16,8 +21,15 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=db37c129_002D389e_002D4b69_002D827b_002D3b36d85567f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestFindLongestSubstringWithKDistinct2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=db37c129_002D389e_002D4b69_002D827b_002D3b36d85567f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindLongestSubstringWithKDistinct2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubarrayOfOneAfterReplacementTest.FindLongestSubarrayOfOneAfterReplacementTester1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
