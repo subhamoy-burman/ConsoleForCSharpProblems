@@ -15,17 +15,17 @@ namespace ConsoleAppBlind75.TwoPointer
             for (int i = leftPointer; i <= rightPointer-2; i++)
             {
                 int localLeft = i + 1;
-                int localright = rightPointer;
-                while (localLeft<localright)
+                int localRight = rightPointer;
+                while (localLeft<localRight)
                 {
-                    if (arr[i] + arr[localLeft] + arr[localright] < target)
+                    if (arr[i] + arr[localLeft] + arr[localRight] < target)
                     {
-                        tripletCount += (localright - localLeft);
+                        tripletCount += (localRight - localLeft);
                         localLeft++;
                     }
                     else
                     {
-                        localright--;
+                        localRight--;
                     }
                 }
             }
