@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Text;
 using ConsoleAppBlind75.RecursionPractice;
 using NUnit.Framework;
 
@@ -42,7 +44,77 @@ namespace Blind75.Test
         [Test]
         public void TestPrintPattern1Iteratively()
         {
-            RecursionPractice.PrintPattern1Iteratively(4);
+            var patten = RecursionPractice.PrintPattern1Iteratively(4);
+        }
+        
+        [Test]
+        public void TestPrintPattern1Recursively()
+        {
+            RecursionPractice.PrintPattern1Recursively(4,0, new StringBuilder());
+        }
+        
+        [Test]
+        public void TestPrintPattern2Recursively()
+        {
+            RecursionPractice.PrintPattern2Recursively(1,0, new StringBuilder());
+        }
+        
+        [Test]
+        public void TestBubbleSort()
+        {
+            var sortedArray = RecursionPractice.BubbleSort(new int[] { 4, 3, 2 , 1});
+        }
+        
+        [Test]
+        public void TestBubbleSortRecursion()
+        {
+            var arr = new int[] {5, 1, 4, 2, 8};
+            RecursionPractice.BubbleSortRecursion(arr, arr.Length );
+        }
+        
+        [Test]
+        public void TestSkipACharacter()
+        {
+            var arr = "baccad";
+            var result = RecursionPractice.SkipACharacter(arr, "" );
+        }
+        
+        [Test]
+        public void TestSkipAWord()
+        {
+            var arr = "bacapplecad";
+            var result = RecursionPractice.SkipAWord(arr, new StringBuilder() );
+        }
+        
+        [Test]
+        public void TestPrintSubsets()
+        {
+            var arr = "abc";
+            RecursionPractice.PrintSubsets(arr, "" );
+        }
+        
+        [Test]
+        public void TestPrintPermutations()
+        {
+            RecursionPractice.PrintPermutations("", "abc" );
+        }
+        
+        [Test]
+        public void TestCountPermutations()
+        {
+           var noOfPermutations =  RecursionPractice.CountPermutations("", "abc" );
+        }
+        
+        [Test]
+        public void TestFindSubsetsRecursively()
+        {
+            var noOfPermutations =  RecursionPractice.GetSubsets(new []{ 1, 5, 3} );
+        }
+        
+        [Test]
+        public void TestFindPermutationsRecursively()
+        {
+            var noOfPermutations =  RecursionPractice.PrintPermutations(new []{ 1, 5, 3} );
         }
     }
 }
