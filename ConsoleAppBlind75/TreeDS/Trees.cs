@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace ConsoleAppBlind75
@@ -23,6 +24,33 @@ namespace ConsoleAppBlind75
     }
     public static class Trees
     {
+
+        public static int GetDiameterOfABinaryTreeRev1(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            int diameter1 = GetDiameterOfABinaryTreeRev1(root.Left);
+            int diameter2 = GetDiameterOfABinaryTreeRev1(root.Right);
+            
+            int heightOfLeft = GetHeightRev1(root.Left);
+            int heightOfRight = GetHeightRev1(root.Right);
+
+            return Math.Max(heightOfLeft + heightOfRight + 2, Math.Max(diameter1, diameter2));
+
+        }
+
+        private static int GetHeightRev1(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            return 1 + Math.Max(GetHeightRev1(root.Left), GetHeightRev1(root.Right));
+        }
 
         public static List<int> GetLevelOrderTraversal(TreeNode root)
         {
@@ -464,6 +492,258 @@ namespace ConsoleAppBlind75
             int rightTime = TotalTimeForBurningTree(root.Right, fireNode);
 
             return -1;
+        }
+
+        public static bool IsLeafNode(TreeNode root)
+        {
+            if (root.Left is null && root.Right is null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public static List<int> PrintBoundaryTraversal(TreeNode root)
+        {
+            List<int> listOfNodes = new List<int>();
+
+            TreeNode refNode = root;
+            if (refNode is null)
+            {
+                return listOfNodes;
+            }
+            
+            listOfNodes.Add(root.Val);
+
+            if (!IsLeaf(root))
+            {
+                AddLeftBoundary2(refNode, listOfNodes);
+                AddLeaves2(refNode, listOfNodes);
+                AddRightBoundary2(refNode, listOfNodes);
+            }
+
+            return listOfNodes;
+        }
+
+        private static void AddRightBoundary2(TreeNode root, List<int> listOfNodes)
+        {
+            TreeNode currNode = root.Right;
+            Stack<int> stackOfNode = new Stack<int>();
+            while (currNode!=null)
+            {
+                if (!IsLeaf(currNode))
+                {
+                    stackOfNode.Push(currNode.Val);
+                    currNode = currNode.Right is null? currNode.Left: currNode.Right;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            while (stackOfNode.Count>0)
+            {
+                listOfNodes.Add(stackOfNode.Pop());
+            }
+        }
+
+        private static void AddLeaves2(TreeNode root, List<int> listOfNodes)
+        {
+            if (IsLeaf(root))
+            {
+                listOfNodes.Add(root.Val);
+                return;
+            }
+            
+            if(root.Left!=null) AddLeaves2(root.Left, listOfNodes);
+            if(root.Right!=null) AddLeaves(root.Right, listOfNodes);
+        }
+
+        private static void AddLeftBoundary2(TreeNode root, List<int> listOfNodes)
+        {
+            TreeNode currNode = root.Left;
+
+            while (currNode!=null)
+            {
+                if (!IsLeaf(currNode))
+                {
+                    listOfNodes.Add(currNode.Val);
+                    currNode = currNode.Left is null ? currNode.Right : currNode.Left;
+                    
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+
+        }
+
+        public static void PrintVerticalOrderTraversal(TreeNode root)
+        {
+            Dictionary<int, List<int>> rootDictionary = new Dictionary<int, List<int>>();
+
+            PrepareVerticalData(root, rootDictionary, 0);
+        }
+
+        private static void PrepareVerticalData(TreeNode node,Dictionary<int, List<int>> rootDictionary, int level )
+        {
+            if (node is null)
+            {
+                return;
+            }
+
+            if (rootDictionary.ContainsKey(level))
+            {
+                rootDictionary[level].Add(node.Val);
+            }
+            else
+            {
+                rootDictionary[level] = new List<int> {node.Val};
+            }
+
+            PrepareVerticalData(node.Left, rootDictionary, level - 1);
+            PrepareVerticalData(node.Right, rootDictionary, level + 1);
+        }
+        
+        public static bool IsSymmetric(TreeNode root) {
+
+            if(root is null)
+                return true;
+
+            if (root.Left is null && root.Right is null)
+            {
+                return true;
+            }
+            
+            if(root.Left!=null && root.Right!=null)
+            {
+                return IsSymmetric(root.Left) && IsSymmetric(root.Right);
+            }
+
+            return false;
+        }
+
+        public static List<TreeNode> PrintPathToNode(TreeNode tree)
+        {
+            List<TreeNode> path = new List<TreeNode>();
+            TraverseForPath(tree,path);
+            return path;
+        }
+
+        private static bool TraverseForPath(TreeNode tree, List<TreeNode> path, int target = 5)
+        {
+            if (tree is null)
+            {
+                return false;
+            }
+            
+            if (tree.Val == target)
+            {
+                path.Add(tree);
+                return true;
+            }
+
+
+            if (TraverseForPath(tree.Left, path))
+            {
+                path.Add(tree);
+                return true;
+            }
+
+            if (TraverseForPath(tree.Right, path))
+            {
+                path.Add(tree);
+                return true;
+            }
+
+            return false;
+
+        }
+
+        private static TreeNode commonNode = null;
+        public static TreeNode LowestCommonAncestor(TreeNode node, int p, int q)
+        {
+            var nodeExist = DoesNodeExist(node, p, q);
+            return commonNode;
+        }
+
+        private static bool DoesNodeExist(TreeNode node, int p, int q)
+        {
+            if (node is null)
+            {
+                return false;
+            }
+
+            bool self = node.Val == p || node.Val == q;
+
+            if (commonNode is not null)
+            {
+                return true;
+            }
+            var leftSideValueExist = DoesNodeExist(node.Left, p, q);
+            if (commonNode is not null)
+            {
+                return true;
+            }
+            var rightSideValueExist = DoesNodeExist(node.Right, p, q);
+
+            if ((leftSideValueExist && rightSideValueExist) || (leftSideValueExist && self) ||
+                (rightSideValueExist && self))
+            {
+                commonNode = node;
+            }
+
+            return self || leftSideValueExist || rightSideValueExist;
+        }
+
+        private static List<int> _levelDownNodeList = new List<int>();
+        private static List<TreeNode> _visitedNode = new List<TreeNode>();
+
+        public static void PrintKNodesFar(TreeNode node, int data, int k)
+        {
+            List<TreeNode> path = PrintPathToNode(node);
+            for (int i = 0; i < path.Count; i++)
+            {
+                PrintKLevelDown(path[i],k - i, i==0? null: path[i-1]);
+            }
+        }
+        private static void PrintKLevelDown(TreeNode node, int level, TreeNode block)
+        {
+            if (node is null || level<0 || node == block)
+            {
+                return;
+            }
+            
+            if (level == 0)
+            {
+                _levelDownNodeList.Add(node.Val);
+            }
+
+            PrintKLevelDown(node.Left, level - 1, block);
+            PrintKLevelDown(node.Right, level - 1, block);
+        }
+
+        public static void TestingSomeRecursionCalls(TreeNode tree)
+        {
+            var node = tree.Left;
+            int length = GoDownAndReturnLength(node);
+        }
+
+        private static int GoDownAndReturnLength(TreeNode node, int count = 0)
+        {
+            if (node is null)
+            {
+                return count;
+            }
+
+            if (node.Left != null)
+                return GoDownAndReturnLength(node.Left, count+1);
+            if (node.Right != null)
+                return GoDownAndReturnLength(node.Right, count + 1);
+            return count;
         }
     }
 

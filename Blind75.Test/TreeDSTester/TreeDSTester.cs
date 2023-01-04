@@ -156,5 +156,162 @@ namespace Blind75.Test.TreeDSTester
 
             int maxLength = Trees.GetMaxWidthOfATree(tree);
         }
+
+        [Test]
+        public void TestDiameterOfABinaryTreeRevision1()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2),
+                Right = new TreeNode(3)
+            };
+
+            tree.Left.Left = new TreeNode(4);
+            tree.Left.Right = new TreeNode(5);
+
+            int diameter = Trees.GetDiameterOfABinaryTreeRev1(tree);
+        }
+
+        [Test]
+        public void TestPrintBoundaryTraversal()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2),
+                Right = new TreeNode(7)
+            };
+
+            tree.Left.Left = new TreeNode(3)
+            {
+                Right = new TreeNode(4)
+                {
+                    Left = new TreeNode(5),
+                    Right = new TreeNode(6)
+                }
+            };
+
+            tree.Right.Right = new TreeNode(8)
+            {
+                Left = new TreeNode(9)
+                {
+                    Left = new TreeNode(10),
+                    Right = new TreeNode(11)
+                }
+            };
+
+            var nodes =Trees.PrintBoundaryTraversal(tree);
+        }
+
+        [Test]
+        public void TestPrintVeritcalTraversal()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2)
+                {
+                    Left = new TreeNode(4)
+                    {
+                        Right = new TreeNode(5)
+                        {
+                            Right = new TreeNode(6)
+                        }
+                    },
+                    Right = new TreeNode(10)
+                },
+                Right = new TreeNode(3)
+                {
+                    Left = new TreeNode(9),
+                    Right = new TreeNode(10)
+                }
+            };
+
+            Trees.PrintVerticalOrderTraversal(tree);
+        }
+
+        [Test]
+        public void TestTreeSymmetry()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2)
+                {
+                    Left = new TreeNode(3),
+                    Right = new TreeNode(4)
+                },
+                Right = new TreeNode(2)
+                {
+                    Left = new TreeNode(4),
+                    Right = new TreeNode(3)
+                }
+            };
+
+            var isEqual = Trees.IsSymmetric(tree);
+        }
+
+        [Test]
+        public void TestPrintPathToNode()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2)
+                {
+                    Left = new TreeNode(4),
+                    Right = new TreeNode(5)
+                    {
+                        Left = new TreeNode(6),
+                        Right = new TreeNode(7)
+                    }
+                },
+                Right = new TreeNode(3)
+            };
+            
+            Trees.PrintPathToNode(tree);
+        }
+
+        [Test]
+        public void TestPrintNodesAtDistanceK()
+        {
+            TreeNode tree = new TreeNode(3)
+            {
+                Left = new TreeNode(5)
+                {
+                    Left = new TreeNode(6),
+                    Right = new TreeNode(2)
+                    {
+                        Left = new TreeNode(7),
+                        Right = new TreeNode(4)
+                    }
+                },
+                Right = new TreeNode(1)
+                {
+                    Left = new TreeNode(0),
+                    Right = new TreeNode(8)
+                }
+            };
+
+            Trees.PrintKNodesFar(tree, 5, 2);
+        }
+
+        [Test]
+        public void TestNodeDown()
+        {
+            TreeNode tree = new TreeNode(1)
+            {
+                Left = new TreeNode(2)
+                {
+                    Left = new TreeNode(4)
+                    {
+                        Right = new TreeNode(7)
+                    }
+                },
+                Right = new TreeNode(3)
+                {
+                    Left = new TreeNode(5),
+                    Right = new TreeNode(6)
+                }
+            };
+            
+            Trees.TestingSomeRecursionCalls(tree);
+        }
     }
 }

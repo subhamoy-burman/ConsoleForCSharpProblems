@@ -48,5 +48,34 @@ namespace ConsoleAppBlind75.DynamicProgramming
 
             return -1;
         }
+
+        public static int NumberOfWaysToClimbStairs(int numberOfStairs, int[] dynArray)
+        {
+            if (dynArray[numberOfStairs] != -1)
+            {
+                return dynArray[numberOfStairs];
+            }
+            if (numberOfStairs == 0)
+            {
+                dynArray[0] = 1;
+            }
+
+            if (numberOfStairs == 1)
+            {
+                dynArray[1] = 1;
+            }
+
+            if (numberOfStairs == 2)
+            {
+                dynArray[2] = 2;
+            }
+
+            return NumberOfWaysToClimbStairs(numberOfStairs - 1, dynArray) + NumberOfWaysToClimbStairs(numberOfStairs - 2, dynArray) 
+                                                                           + NumberOfWaysToClimbStairs(numberOfStairs-3, dynArray);
+                
+            
+
+            return -1; //NumberOfWaysToClimbStairs(numberOfStairs - 1) + NumberOfWaysToClimbStairs(numberOfStairs - 2);
+        }
     }
 }
