@@ -209,5 +209,7 @@ namespace ConsoleAppBlind75.Graph
         {
             zText.Add("foo");
         }
+
+        
     }
 }

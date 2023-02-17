@@ -12,7 +12,6 @@
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Blind75.Test.runtimeconfig.json
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Blind75.Test.runtimeconfig.dev.json
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Blind75.Test.dll
-/Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/ref/Blind75.Test.dll
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Blind75.Test.pdb
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/Microsoft.DotNet.InternalAbstractions.dll
@@ -104,3 +103,5 @@
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/obj/Debug/net5.0/ref/Blind75.Test.dll
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/obj/Debug/net5.0/Blind75.Test.pdb
 /Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/obj/Debug/net5.0/Blind75.Test.genruntimeconfig.cache
+/Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/bin/Debug/net5.0/ConsoleAppBlind75
+/Users/burmas3/CodePractices/ConsoleAppBlind75/Blind75.Test/obj/Debug/net5.0/refint/Blind75.Test.dll

@@ -1,13 +1,97 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fburmas3_002FDownloads_002FSystem_002ESecurity_002EPermissions_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/Users/burmas3/Downloads/System.Security.Permissions.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/burmas3/Library/Caches/JetBrains/Rider2022.3/resharper-host/temp/Rider/vAny/CoverageData/_ConsoleAppBlind75.476362983/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=112911a5_002Da5c5_002D41e4_002Dafd6_002Db771237e553f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestSubsetsUnique" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestSubsetsUnique&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12e7f4a4_002Da9c3_002D4727_002D90fa_002D54c67ac7f4f8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestPrintAllPath #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=14830413_002Dc48a_002D4fdd_002D9739_002D90b78c235d2c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestRecusrion" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1af2e105_002D3836_002D481c_002Da051_002Df21624d3c7e9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DFSTester2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DFSTests.DFSTester.DFSTester2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.PriorityQueueTester.PriorityQueueTester.TestPriorityQueue&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=21362aa0_002Da203_002D4de1_002D9c68_002D3cbe1c4f8468/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindIfStringContainsPermutationOfAPatternTest4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindIfStringContainsPermutationOfAPatternTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindAllAnagramsOfAGivenStringTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=368a977c_002Df66d_002D4142_002Dbbaf_002Dfc8d2134ce21/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CoinChangeCombinationsTester #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester.CoinChangeCombinationsTester&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3b6dabce_002Da666_002D4004_002Dab78_002Dabc628182bb5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=778fe5fe_002D4323_002D43bc_002D91b0_002Df2a263cb9887/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FindLongestSubarrayOfOneAfterReplacementTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=406ca61c_002D43bb_002D416d_002D8969_002D60cbba63918e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CoinChangeCombinationsTester #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester.CoinChangeCombinationsTester&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestMatrixPathPrint&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4df387fa_002Dfe0d_002D4511_002D8aaf_002D0ceeaca17114/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SubarrayWithProductLessThanTargetTests2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.SubarrayWithProductLessThanTargetTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FastSlowPointerTest.FastSlowPointerTester.FastSlowPointerRunTest1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FastSlowPointerTest.DetectCycleStartAtLinkedListTester.DetectCycleStartAtLinkedListTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.ReverseLinkedListTest.ReverseLinkedListTests.LinkedListTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.ReverseLinkedListTest.ReverseLinkedListTests.LinkedListTester2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.ReverseLinkedListTest.ReverseLinkedListTests.LinkedListTester3&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5993bd5b_002D905b_002D49bc_002D864a_002Dcd08519e9ad0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestPrintPattern1Iteratively" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestPrintPattern1Iteratively&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=608935d8_002D1156_002D497e_002Dbd2f_002D6594a5ca18cd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSubsetsRecursively" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestFindSubsetsRecursively&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=71e1fc02_002Dc23a_002D48d9_002Dba3c_002D6adb085aebdb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MaxSubarrayTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.GreedyTests.GreedyTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SortingSearchingTester.SortingSearchingTester.TestSelectionSort&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=778fe5fe_002D4323_002D43bc_002D91b0_002Df2a263cb9887/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindLongestSubarrayOfOneAfterReplacementTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubarrayOfOneAfterReplacementTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindIfStringContainsPermutationOfAPatternTest.FindIfStringContainsPermutationOfAPatternTest1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindIfStringContainsPermutationOfAPatternTest.FindIfStringContainsPermutationOfAPatternTest2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindIfStringContainsPermutationOfAPatternTest.FindIfStringContainsPermutationOfAPatternTest3&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=799789e4_002Dcb65_002D4e1f_002Dbc71_002D43b9bd68a0d9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestSubsetsUnique #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestSubsetsUnique&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestSubsetsCombinationUnique&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7fd870bb_002De9da_002D4f81_002D8986_002Def8c002cb594/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
@@ -16,20 +100,96 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum2&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=853ac2b4_002D4e5e_002D4893_002D8db5_002D24faea0848ba/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CoinChangeCombinationsTester" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester.CoinChangeCombinationsTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=92ab0566_002D4f2e_002D4a75_002D8365_002Dcbb383d5f420/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindSmallestWindowContainingSubstringTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.CountDuplicateTests.CountDuplicateTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.CountDuplicateTests.CountDuplicateTester2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.CountDuplicateTests.CountDuplicateTester3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.CountDuplicateTests.CountDuplicateTester4&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindSquareRootOfASortedArrayTests.FindSquareRootOfASortedArrayTest1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=94b941d5_002D91a4_002D4110_002D94b2_002D9b72a179f837/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindAllAnagramsOfAGivenStringTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindAllAnagramsOfAGivenStringTester.FindAllAnagramsOfAGivenStringTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindAllAnagramsOfAGivenStringTester.FindAllAnagramsOfAGivenStringTester2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindAllAnagramsOfAGivenStringTester.FindAllAnagramsOfAGivenStringTester3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindSmallestWindowContainingSubstringTester.FindSmallestWindowContainingSubstringTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindSquareRootOfASortedArrayTests.FindSquareRootOfASortedArrayTest1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=94d3433b_002D1113_002D40be_002Db916_002D59b9f70822d6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindSquareRootOfASortedArrayTest1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindSquareRootOfASortedArrayTests.FindSquareRootOfASortedArrayTest1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindSquareRootOfASortedArrayTests.FindSquareRootOfASortedArrayTest2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindThreeSumZeroTripletTests.FindThreeSumZeroTripletTest1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindThreeSumZeroTripletTests.FindThreeSumZeroTripletTest2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a51a5421_002Ddf27_002D419d_002Db684_002D64781c0f5055/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestNQueen" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad74680c_002D1f87_002D4466_002Da04b_002Db890c1f57a5e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSmallestSubArrayOfGivenSum1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BlindTester.TestFindSmallestSubArrayOfGivenSum1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.SubarrayWithProductLessThanTargetTests.SubarrayWithProductLessThanTargetTests1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.SubarrayWithProductLessThanTargetTests.SubarrayWithProductLessThanTargetTests2&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=db37c129_002D389e_002D4b69_002D827b_002D3b36d85567f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindLongestSubstringWithKDistinct2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aef75b1d_002Df664_002D4db2_002D98d2_002D07ef22c121c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestPrintAllPath" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithKDistinctTester.TestFindLongestSubstringWithKDistinct2&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring1&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring2&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestNoRepeatSubstringTester.TestFindLongestNoRepeatSubstring3&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester1&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester2&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubstringWithSameLetterAfterReplacementTester.FindLongestSubstringWithSameLetterAfterReplacementTester3&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindLongestSubarrayOfOneAfterReplacementTest.FindLongestSubarrayOfOneAfterReplacementTester1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.GraphTests.GraphTests.TestPrintAllPath&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester.TestNoOfWaysToClimbStairs&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TreeDSTester.TreeDSTester.TestDiameterOfABinaryTreeRevision1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TreeDSTester.TreeDSTester.TestPrintBoundaryTraversal&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TreeDSTester.TreeDSTester.TestPrintVeritcalTraversal&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TreeDSTester.TreeDSTester&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bc47a75d_002Da353_002D4939_002Da3ec_002D7b7857efa0a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindSubsetsRecursively #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestFindSubsetsRecursively&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestFindPermutationsRecursively&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BinarySearchTester.BinarySearchTester.TestSmallestCharacterNearToTargetInArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BinarySearchTester.BinarySearchTester.TestSmallestCharacterNearToTargetInArray1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BinarySearchTester.BinarySearchTester.TestSmallestCharacterNearToTargetInArray3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BinarySearchTester.BinarySearchTester.TestSmallestCharacterNearToTargetInArray2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c9aa3632_002Dbd19_002D4bb4_002Dadce_002D5e0502ad2b57/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ClimbStairsWithMinCostOptimized" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.DynamicProgrammingTester.DynamicProgrammingTester.ClimbStairsWithMinCostOptimized&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cff012e7_002D4470_002D486d_002D912f_002De9f1ed44d58a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestSubsetsCombinationUnique" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestSubsetsCombinationUnique&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BacktrackingTester.BacktrackingTester.TestPartition&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.GreedyTests.GreedyTests.MaxSubarrayTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.GreedyTests.GreedyTests.TestValidParenthesisWithStar&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dab31c0c_002D0d28_002D4c8a_002Da098_002D18ae81fca8e1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestFindPermutationsRecursively" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestFindPermutationsRecursively&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e79846e5_002Ddee4_002D4ac7_002Da4e6_002D06e6982c6a6b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AnagramTester" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.StringAndArrayTester.StringAndArrayTester&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	</wpf:ResourceDictionary>
