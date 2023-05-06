@@ -92,5 +92,17 @@ namespace Blind75.Test.BinarySearchTester
             int target = 181;
             var index = PeakIndexOfMountainArray.FindInMountainArray(arrayOfLetters,target);
         }
+
+        [Test]
+        public void SearchInRotatedArray()
+        {
+            //int[] input = {4, 5, 6, 7, 8, 0, 1, 3};
+            //int[] input = {3, 4, 5, 1, 2};
+            //int[] input = {4, 5, 6, 7, 0, 1, 2};
+            //int[] input = {11, 13, 15, 17};
+            int[] input = {1,2};
+
+            var min = BinarySearchProgram.FindMinimumInRotatedSortedArray(input);
+        }
     }
 }

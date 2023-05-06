@@ -1,3 +1,5 @@
+using System.Net.Security;
+
 namespace ConsoleAppBlind75.LinkedList
 {
     public class LinkedList
@@ -110,6 +112,104 @@ namespace ConsoleAppBlind75.LinkedList
                 }
 
                 return null;
+            }
+
+            public static LLNode tempTail = null;
+            
+            public static LLNode MergeSortedLL2(LLNode node1, LLNode node2)
+            {
+                if (node1 is null)
+                {
+                    return node2;
+                }
+
+                if (node2 is null)
+                {
+                    return node1;
+                }
+
+                while (node1!=null || node2!=null)
+                {
+                    if (node1 is null)
+                    {
+                        tempTail.Next = node2;
+                        return tempTail;
+                    }
+
+                    if (node2 is null)
+                    {
+                        tempTail.Next = node1;
+                        return tempTail;
+                    }
+
+                    if (node1.Data >= node2.Data)
+                    {
+                        AddLast(node2);
+                        node2 = node2.Next;
+                        continue;
+                    }
+
+                    AddLast(node1);
+                    node1 = node1.Next;
+                }
+
+                return tempTail;
+            }
+
+            private static void AddLast(LLNode node)
+            {
+                if (tempTail == null)
+                {
+                    tempTail = new LLNode(node.Data);
+                }
+                else
+                {
+                    tempTail.Next = new LLNode(node.Data);
+                }
+            }
+
+            public static LLNode AddTwoLLNumbers(LLNode node1, LLNode node2)
+            {
+                int carry = 0;
+                LLNode resultHead = new LLNode(0);
+                LLNode result = resultHead;
+                while (node1 != null || node2 != null)
+                {
+                    int node1Val = 0;
+                    int node2Val = 0;
+                    int sum = 0;
+
+                    
+                    if (node1 != null)
+                    {
+                        node1Val = node1.Data;
+                        node1 = node1.Next;
+                    }
+
+                    if (node2!= null)
+                    {
+                        node2Val = node2.Data;
+                        node2 = node2.Next;
+                    }
+                    
+                    var localSum = node1Val + node2Val + carry;
+
+                    if (localSum >= 10)
+                    {
+                        sum = (localSum - 10);
+                        carry = localSum / 10;
+                    }
+                    else
+                    {
+                        sum = localSum;
+                        carry = 0;
+                    }
+
+                    result.Next = new LLNode(sum);
+                    result = result.Next;
+                }
+
+                return resultHead.Next;
             }
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -182,6 +183,52 @@ namespace ConsoleAppBlind75.StackNQueue
 
             return totalNumberOfRottenOranges != totalNumberOfOranges ? totalNumberOfDaysToRot: -1;
 
+        }
+
+        public static int ResultOfPolishNotation(char[] input)
+        {
+            Stack<int> processStack = new Stack<int>();
+            for (int i = 0; i < input.Length; i++)
+            {
+                var currentChar = input[i];
+                if (currentChar != '*' && currentChar != '+' && currentChar != '/' && currentChar != '-')
+                {
+                    processStack.Push(currentChar - '0');
+                }
+                else
+                {
+                    var stackFirstOperand = processStack.Pop();
+                    var stackSecondOperand = processStack.Pop();
+                    int result = 0;
+
+                    switch (currentChar)
+                    {
+                        case '*':
+                            result = stackSecondOperand * stackFirstOperand;
+                            break;
+                        case '+':
+                            result = stackSecondOperand + stackFirstOperand;
+                            break;
+                        case '-':
+                            result = stackSecondOperand - stackFirstOperand;
+                            break;
+                        case '/':
+                            if (stackSecondOperand / stackFirstOperand < 0)
+                            {
+                                result = 0;
+                            }
+                            else
+                            {
+                                result = stackSecondOperand / stackFirstOperand;
+                            }
+                            break;
+                                
+                    }
+                    processStack.Push(result);
+                }
+            }
+
+            return processStack.Pop();
         }
     }
 }

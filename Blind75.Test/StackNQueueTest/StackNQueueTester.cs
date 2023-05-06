@@ -51,5 +51,11 @@ namespace Blind75.Test.StackNQueueTest
 
             StackPrograms.DetectRottenOranges(rottenCords);
         }
+
+        [Test]
+        public void TestPolishNotation()
+        {
+            var result = StackPrograms.ResultOfPolishNotation(new[] {'2', '1', '+', '3', '*'});
+        }
     }
 }

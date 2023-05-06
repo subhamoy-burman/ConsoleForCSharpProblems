@@ -32,6 +32,14 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.FindAllAnagramsOfAGivenStringTester&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2b445525_002D5bf7_002D4ff6_002Db9fa_002Db7897f73a997/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestMinSubArrayLen" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SlidingWindowTester.TestMinSubArrayLen&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SlidingWindowTester.TestLongestSubStringWithKDistinctElement&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.TwoPointerTests.TestMinimumWindowSortSubArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.StackNQueueTest.StackNQueueTester.TestPolishNotation&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=368a977c_002Df66d_002D4142_002Dbbaf_002Dfc8d2134ce21/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CoinChangeCombinationsTester #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
@@ -78,6 +86,12 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.GreedyTests.GreedyTests&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SortingSearchingTester.SortingSearchingTester.TestSelectionSort&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=73ceb107_002D4450_002D4bbd_002Da1dd_002Dbeca249b5bdc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAddTwoLLNumbers" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.LinkedListTests.LinkedListTests.TestAddTwoLLNumbers&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF::net5.0::ConsoleNeetCode.RevisionOne.Test.Tests.TestClimbingStairsRecursion&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=778fe5fe_002D4323_002D43bc_002D91b0_002Df2a263cb9887/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindLongestSubarrayOfOneAfterReplacementTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
@@ -185,9 +199,25 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.RecursionTester.TestFindPermutationsRecursively&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e79846e5_002Ddee4_002D4ac7_002Da4e6_002D06e6982c6a6b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AnagramTester" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e4b12070_002Da63f_002D4e65_002Db37d_002Dad535d4a9780/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestMinimumWindowSortSubArray" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.TwoPointerTests.TestMinimumWindowSortSubArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SlidingWindowTester.TestPalindrome&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.StackNQueueTest.StackNQueueTester.TestPolishNotation&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.BinarySearchTester.BinarySearchTester.SearchInRotatedArray&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e71fca6b_002Db399_002D43b7_002Da357_002D43993c6000ca/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchInRotatedArray" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.LinkedListTests.LinkedListTests.TestMergeSortedLinkedList2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.LinkedListTests.LinkedListTests.TestAddTwoLLNumbers&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF::net5.0::ConsoleNeetCode.RevisionOne.Test.Tests.TestClimbingStairsRecursion&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e79846e5_002Ddee4_002D4ac7_002Da4e6_002D06e6982c6a6b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AnagramTester" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.StringAndArrayTester.StringAndArrayTester&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SlidingWindowTester.TestMinSubArrayLen&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	

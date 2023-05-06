@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppBlind75", "Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blind75.Test", "Blind75.Test\Blind75.Test.csproj", "{ECE3ED0C-11B9-4A11-B02C-AC5444623C15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNeetCode.RevisionOne", "ConsoleNeetCode.RevisionOne\ConsoleNeetCode.RevisionOne.csproj", "{CFE3D11C-4AFE-4AC0-9342-3F6F2228605A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNeetCode.RevisionOne.Test", "ConsoleNeetCode.RevisionOne.Test\ConsoleNeetCode.RevisionOne.Test.csproj", "{71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{ECE3ED0C-11B9-4A11-B02C-AC5444623C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECE3ED0C-11B9-4A11-B02C-AC5444623C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECE3ED0C-11B9-4A11-B02C-AC5444623C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE3D11C-4AFE-4AC0-9342-3F6F2228605A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE3D11C-4AFE-4AC0-9342-3F6F2228605A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE3D11C-4AFE-4AC0-9342-3F6F2228605A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE3D11C-4AFE-4AC0-9342-3F6F2228605A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

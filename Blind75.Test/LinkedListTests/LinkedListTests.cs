@@ -60,5 +60,33 @@ namespace Blind75.Test.LinkedListTests
 
             var result = LinkedList.LinkedListPrograms.ReturnLinkedListIntersectionPoint(llNode1, llNode2);
         }
+        
+        [Test]
+        public void TestMergeSortedLinkedList2()
+        {
+            LinkedList.LLNode llNode1 = new LinkedList.LLNode(5);
+            llNode1.Next = new LinkedList.LLNode(10);
+            llNode1.Next.Next = new LinkedList.LLNode(15);
+
+            LinkedList.LLNode llNode2 = new LinkedList.LLNode(2);
+            llNode2.Next = new LinkedList.LLNode(3);
+            llNode2.Next.Next = new LinkedList.LLNode(20);
+
+            var resultList = LinkedList.LinkedListPrograms.MergeSortedLL2(llNode1, llNode2);
+        }
+
+        [Test]
+        public void TestAddTwoLLNumbers()
+        {
+            LinkedList.LLNode llNode1 = new LinkedList.LLNode(2);
+            llNode1.Next = new LinkedList.LLNode(4);
+            llNode1.Next.Next = new LinkedList.LLNode(3);
+
+            LinkedList.LLNode llNode2 = new LinkedList.LLNode(5);
+            llNode2.Next = new LinkedList.LLNode(6);
+            llNode2.Next.Next = new LinkedList.LLNode(2);
+
+            var result = LinkedList.LinkedListPrograms.AddTwoLLNumbers(llNode1, llNode2);
+        }
     }
 }

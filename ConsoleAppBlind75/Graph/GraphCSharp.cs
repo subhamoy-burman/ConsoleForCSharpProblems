@@ -210,6 +210,45 @@ namespace ConsoleAppBlind75.Graph
             zText.Add("foo");
         }
 
+        public class Node {
+            public int Val;
+            public IList<Node> Neighbors;
         
+            public Node() {
+                Val = 0;
+                Neighbors = new List<Node>();
+            }
+        
+            public Node(int _val) {
+                Val = _val;
+                Neighbors = new List<Node>();
+            }
+        
+            public Node(int _val, List<Node> _neighbors) {
+                Val = _val;
+                Neighbors = _neighbors;
+            }
+
+            public Dictionary<Node, Node> map = new Dictionary<Node, Node>();
+            public Node CloneGraph(Node node)
+            {
+                if (node is null)
+                {
+                    return null;
+                }
+
+                if (!map.ContainsKey(node))
+                {
+                    map[node] = new Node() {Val = node.Val, Neighbors = new List<Node>()};
+
+                    foreach (var item in node.Neighbors)
+                    {
+                        map[node].Neighbors.Add(CloneGraph(item));
+                    }
+                }
+
+                return map[node];
+            }
+        }
     }
 }
