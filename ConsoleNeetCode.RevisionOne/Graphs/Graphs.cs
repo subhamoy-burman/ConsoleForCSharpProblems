@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleNeetCode.RevisionOne.Graphs
 {
@@ -6,7 +7,10 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
     {
         public int RowIndex { get; set; }
         public int ColIndex { get; set; }
-        
+    }
+
+    public class GridIndex : IslandIndex
+    {
         
     }
     
@@ -145,6 +149,172 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
             }
 
             return dictNodes[node];
+        }
+
+        public static int MaxAreaOfIsland(int[,] grid)
+        {
+            bool[,] visited = new bool[grid.GetLength(0),grid.GetLength(1)];
+            int max = Int32.MinValue;
+
+            for (int i = 0; i < grid.GetLength(0); i++)
+            {
+                for (int j = 0; j < grid.GetLength(1); j++)
+                {
+                    if (grid[i, j] == 1 && !visited[i, j])
+                    {
+                        max = Math.Max(max, MaxAreaOfIslandDfs(grid, i, j, visited));
+                    }
+                }
+            }
+
+            return max;
+        }
+
+        private static int MaxAreaOfIslandDfs(int[,] grid, int rowIndex, int colIndex, bool[,] visited)
+        {
+            if (rowIndex >= 0 && rowIndex < grid.GetLength(0)
+                              && colIndex >= 0 && colIndex < grid.GetLength(1) 
+                              && grid[rowIndex,colIndex] == 1 && !visited[rowIndex, colIndex])
+            {
+                visited[rowIndex, colIndex] = true;
+                return 1 + MaxAreaOfIslandDfs(grid, rowIndex + 1, colIndex + 1, visited) 
+                         + MaxAreaOfIslandDfs(grid, rowIndex+1, colIndex, visited)
+                         + MaxAreaOfIslandDfs(grid, rowIndex-1, colIndex-1, visited)
+                         + MaxAreaOfIslandDfs(grid, rowIndex-1, colIndex, visited);
+            }
+
+            return 0;
+        }
+
+        public class Region
+        {
+            public int XMark { get; set; }
+            public int YMark { get; set; }
+            
+        }
+        public static char[,] SurroundedRegion(char[,] graph)
+        {
+            bool[,] visited = new bool[graph.GetLength(0), graph.GetLength(1)];
+
+            int[] dx = {0, -1, 0, 1};
+            int[] dy = {1, 0, 1, 0};
+            int rowEndIndex = graph.GetLength(0) - 1;
+            int colEndIndex = graph.GetLength(1) - 1;
+            for (int i = 0; i <= colEndIndex; i++)
+            {
+                if (graph[0, i] == '0' && !visited[0, i])
+                {
+                    visited[0, i] = true;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        DfsSurroundedRegions(graph, 0+dx[j], i+dy[j], visited);
+                    }
+                }
+
+                if (graph[rowEndIndex, i] == '0' 
+                    && !visited[rowEndIndex, i])
+                {
+                    visited[rowEndIndex, i] = true;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        DfsSurroundedRegions(graph, rowEndIndex+dx[j], i+dy[j], visited);
+                    }
+                }
+            }
+
+            for (int i = 0; i <= rowEndIndex; i++)
+            {
+                if (graph[i, 0] == '0' && !visited[i, 0])
+                {
+                    visited[i, 0] = true;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        DfsSurroundedRegions(graph, i+dx[j], 0+dy[j], visited);
+                    }
+                }
+                if (graph[i, colEndIndex] == '0' 
+                    && !visited[i, colEndIndex])
+                {
+                    visited[i, colEndIndex] = true;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        DfsSurroundedRegions(graph, i+dx[j], colEndIndex+dy[j], visited);
+                    }
+                }
+            }
+            
+            return graph;
+        }
+
+        private static void DfsSurroundedRegions(char[,] graph,int rowIndex, int colIndex,bool[,] visited)
+        {   
+            if (rowIndex >= 0 && rowIndex < graph.GetLength(0)
+                              && colIndex >= 0 && colIndex < graph.GetLength(1) 
+                              && !visited[rowIndex, colIndex] && graph[rowIndex, colIndex] == 1)
+            {
+                visited[rowIndex, colIndex] = true;
+            }
+        }
+
+        public static int RottenOranges(int[,] grid)
+        {
+            return SolveRottenOranges(grid);
+        }
+
+        private static int SolveRottenOranges(int[,] grid)
+        {
+            int rowNum = grid.GetLength(0);
+            int colNum = grid.GetLength(1);
+            int timeToRotOrange = 0;
+            Queue<GridIndex> rottenQueue = new Queue<GridIndex>();
+            bool[,] visited = new bool[rowNum, colNum];
+            for (int i = 0; i < rowNum; i++)
+            {
+                for (int j = 0; j < colNum; j++)
+                {
+                    if (grid[i, j] == 2)
+                    {
+                        visited[i, j] = true;
+                        rottenQueue.Enqueue(new GridIndex(){ RowIndex = i, ColIndex = j});
+                    }
+                }
+            }
+
+            int[] dx = new[] {0, 1, 0, -1};
+            int[] dy = new[] {1, 0, -1, 0};
+
+            while (rottenQueue.Count != 0)
+            {
+                int toBeProcessed = rottenQueue.Count;
+                timeToRotOrange++;
+                for (int i = 0; i < toBeProcessed; i++)
+                {
+                    var processed = rottenQueue.Dequeue();
+                    
+                    for (int j = 0; j < 4; j++)
+                    {
+                        if (processed.RowIndex + dx[j] < rowNum
+                            &&
+                            processed.ColIndex + dy[j] < colNum
+                            &&
+                            processed.RowIndex + dx[j] >= 0
+                            &&
+                            processed.ColIndex + dy[j] >= 0
+                            && 
+                            grid[processed.RowIndex + dx[j], processed.ColIndex + dy[j]] == 2
+                            &&
+                            !visited[processed.RowIndex + dx[j], processed.ColIndex + dy[j]] 
+                            )
+                        {
+                            rottenQueue.Enqueue(new GridIndex(){ RowIndex = processed.RowIndex + dx[j], ColIndex = processed.ColIndex + dy[j]});
+                            visited[processed.RowIndex + dx[j], processed.ColIndex + dy[j]] = true;
+                        }
+                    }
+                }
+            }
+
+            //if visited count == rotten count then return timeToRotOrange else return -1
+            return  timeToRotOrange;
         }
     }
 }

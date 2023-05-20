@@ -108,5 +108,66 @@ namespace ConsoleNeetCode.RevisionOne.Test
         {
             Assert.AreEqual(expected,DynamicProgramming.DynamicProgramming.KnapsackProblem(weights, values,targetWeight ));
         }
+
+        [Test]
+        [TestCase(new string[] { "apple", "pie", "air", "line" }, "applepieairline",  new string[] { "apple pie air line" })]
+        [TestCase(new string[] { "i", "like", "to", "eat", "ice", "cream" }, "iliketoeaticecream",  new string[] { "i like to eat ice cream" })]
+        [TestCase(new string[] { "go", "od", "g", "o" }, "good",  new string[] { "go od", "g o od" })]
+
+        public void TestWordBreak(string[] words, string targetWord, string[] expectedResults)
+        {
+            var result = DynamicProgramming.DynamicProgramming.WordBreak(words, targetWord);
+
+            Assert.That(result.ToArray(), Is.EquivalentTo(expectedResults));
+        }
+
+        [Test]
+        public void TestGraphMaxAreaIsland()
+        {
+            int[,] grid = new int[,]
+            {
+                {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}
+            };
+
+            int expected = 6;
+
+            var result = Graphs.Graphs.MaxAreaOfIsland(grid);
+            Assert.AreEqual(expected, result);
+
+        }
+
+        [Test]
+        public void TestLongestIncreasingSubsequence()
+        {
+            int[] inputArray = new[] {10, 9, 2, 5, 3, 7, 101, 18};
+            Assert.AreEqual(4,DynamicProgramming.DynamicProgramming.LongestIncreasingSubsequence(inputArray));
+        }
+
+        [Test]
+        public void TestSurroundedRegion()
+        {
+            char[,] grid = new char[,]
+            {
+                { 'X', 'X', 'X', 'X' },
+                { 'X', '0', '0', 'X' },
+                { 'X', 'X', '0', 'X' },
+                { 'X', '0', 'X', 'X' }
+            };
+            
+            Assert.AreEqual(0, Graphs.Graphs.SurroundedRegion(grid));
+        }
+
+        [Test]
+        public void TestUniquePaths()
+        {
+            Assert.AreEqual(28, DynamicProgramming.DynamicProgramming.UniqueGridPaths(3,7));
+        }
     }
 }

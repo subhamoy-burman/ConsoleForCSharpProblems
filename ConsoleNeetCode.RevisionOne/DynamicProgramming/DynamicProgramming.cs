@@ -407,6 +407,73 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
                 return dpArr[index, target];
             }
         }
+
+        public static List<string> WordBreak(string[] words, string targetWord)
+        {
+            List<string> ansList = new List<string>();
+            PerformWordBreakBacktrack(words, targetWord, ansList,string.Empty);
+            return ansList;
+        }
+
+        private static void PerformWordBreakBacktrack(string[] words, string targetWord, List<string> answerList, string answer)
+        {
+            if (targetWord.Length == 0)
+            {
+                answerList.Add(answer);
+                return;
+            }
+            for (int i = 0; i < targetWord.Length; i++)
+            {
+                string left = targetWord.Substring(0, i+1);
+                if (words.Contains(left))
+                {
+                    PerformWordBreakBacktrack(words, targetWord.Substring(i + 1), answerList,  answer + left);
+                }
+            }
+        }
+
+        public static int LongestIncreasingSubsequence(int[] inputArray)
+        {
+            return LongestIncreasingSubsequenceRecursion(0, -1, inputArray);
+        }
+
+        private static int LongestIncreasingSubsequenceRecursion(int currentIndex, int prevIndex, int[] inputArray)
+        {
+            if (currentIndex == inputArray.Length)
+            {
+                return 0;
+            }
+
+            int notPickLength = LongestIncreasingSubsequenceRecursion(currentIndex + 1, prevIndex, inputArray);
+            int pickLength = 0;
+
+            if (prevIndex == -1 || inputArray[currentIndex] > inputArray[prevIndex])
+            {
+                pickLength = 1 + LongestIncreasingSubsequenceRecursion(currentIndex + 1, currentIndex, inputArray);
+            }
+
+            return Math.Max(pickLength, notPickLength);
+        }
+
+        public static int UniqueGridPaths(int rowIndex, int colIndex)
+        {
+            return CalculateUniqueGridPaths(rowIndex-1, colIndex-1);
+        }
+
+        private static int CalculateUniqueGridPaths(int rowIndex, int colIndex)
+        {
+            if (rowIndex == 0 && colIndex == 0)
+            {
+                return 1;
+            }
+
+            if (rowIndex < 0 || colIndex < 0)
+            {
+                return 0;
+            }
+
+            return CalculateUniqueGridPaths(rowIndex - 1, colIndex) + CalculateUniqueGridPaths(rowIndex, colIndex - 1);
+        }
     }
     
 }
