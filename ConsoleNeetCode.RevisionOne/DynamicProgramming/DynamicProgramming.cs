@@ -36,6 +36,7 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
 
         public static int MinCostInClimbingNoOfStairs(int[] costOfClimbing)
         {
+            return 1;
         }
     }
     
