@@ -88,11 +88,14 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.SortingSearchingTester.SortingSearchingTester.TestSelectionSort&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=73ceb107_002D4450_002D4bbd_002Da1dd_002Dbeca249b5bdc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestAddTwoLLNumbers" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.LinkedListTests.LinkedListTests.TestAddTwoLLNumbers&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF::net5.0::ConsoleNeetCode.RevisionOne.Test.Tests.TestClimbingStairsRecursion&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=73ceb107_002D4450_002D4bbd_002Da1dd_002Dbeca249b5bdc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestAddTwoLLNumbers" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.LinkedListTests.LinkedListTests.TestAddTwoLLNumbers&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF::net5.0::ConsoleNeetCode.RevisionOne.Test.Tests.TestClimbingStairsRecursion&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF/f:ConsoleNeetCodeTests.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=778fe5fe_002D4323_002D43bc_002D91b0_002Df2a263cb9887/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FindLongestSubarrayOfOneAfterReplacementTester1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
@@ -144,6 +147,9 @@
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindThreeSumZeroTripletTests.FindThreeSumZeroTripletTest1&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::ECE3ED0C-11B9-4A11-B02C-AC5444623C15::net5.0::Blind75.Test.TwoPointerTests.FindThreeSumZeroTripletTests.FindThreeSumZeroTripletTest2&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9ea3c632_002Db007_002D46e5_002D947c_002De86860ae61e1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestHouseRobber" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;71764FDF-B0BA-4BD6-A44A-8FC6E4CD01EF/f:ConsoleNeetCodeTests.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a51a5421_002Ddf27_002D419d_002Db684_002D64781c0f5055/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestNQueen" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
