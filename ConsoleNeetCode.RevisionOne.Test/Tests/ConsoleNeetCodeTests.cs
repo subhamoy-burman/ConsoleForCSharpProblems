@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Reflection;
 using NUnit.Framework;
 
@@ -168,6 +169,37 @@ namespace ConsoleNeetCode.RevisionOne.Test
         public void TestUniquePaths()
         {
             Assert.AreEqual(28, DynamicProgramming.DynamicProgramming.UniqueGridPaths(3,7));
+        }
+
+        [Test]
+        public void TestAlienDictionary()
+        {
+            List<string> dict = new List<string>
+                {
+                    "baa", "abcd", "abca", "cab", "cad"
+                }
+                ;
+            Assert.AreEqual("bdac",Graphs.Graphs.AlienDictionary(dict,4));
+        }
+        
+        
+        [Test]
+        public void FindItinerary_Example1_ReturnsCorrectItinerary()
+        {
+            // Arrange
+            var listOfTickets = new List<List<string>>()
+            {
+                new List<string>() { "MUC", "LHR" },
+                new List<string>() { "JFK", "MUC" },
+                new List<string>() { "SFO", "SJC" },
+                new List<string>() { "LHR", "SFO" }
+            };
+
+            // Act
+            var result = Graphs.Graphs.FindItinerary(listOfTickets);
+
+            // Assert
+            CollectionAssert.AreEqual(new List<string>() { "JFK","MUC","LHR","SFO","SJC" }, result);
         }
     }
 }

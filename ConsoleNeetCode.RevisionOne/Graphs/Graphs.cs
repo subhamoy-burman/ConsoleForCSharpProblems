@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleNeetCode.RevisionOne.Graphs
 {
@@ -12,6 +13,12 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
     public class GridIndex : IslandIndex
     {
         
+    }
+
+    public class WordListPair
+    {
+        public int Index { get; set; }
+        public string Word { get; set; }
     }
     
     public class GraphNode {
@@ -263,6 +270,7 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
 
         private static int SolveRottenOranges(int[,] grid)
         {
+            //This implementation has a issue we need to Find the Max TS on each queue operation
             int rowNum = grid.GetLength(0);
             int colNum = grid.GetLength(1);
             int timeToRotOrange = 0;
@@ -315,6 +323,146 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
 
             //if visited count == rotten count then return timeToRotOrange else return -1
             return  timeToRotOrange;
+        }
+
+        public static string AlienDictionary(List<string> listOfStrings, int noOfAlphabets)
+        {
+            List<List<int>> adjList = new List<List<int>>();
+
+            for (int i = 0; i < noOfAlphabets; i++)
+            {
+                adjList.Add(new List<int>());
+            }
+            
+            for (int i = 0; i < listOfStrings.Count-1; i++)
+            {
+                string firstString = listOfStrings[i];
+                string secondString = listOfStrings[i + 1];
+                int iterationLength = Math.Min(firstString.Length, secondString.Length);
+                for (int j = 0; j < iterationLength; j++)
+                {
+                    if (firstString[j] == secondString[j]) continue;
+                    adjList[firstString[j]-'a'].Add(secondString[j]-'a');
+                    break;
+                }
+            }
+
+            List<int> listOfChars = SolveAlienDictionary(adjList,noOfAlphabets, new List<int>());
+            string ans = "";
+            foreach (int it in listOfChars)
+            {
+                ans = ans + (char)(it);
+            }
+
+            return ans;
+        }
+
+        private static List<int> SolveAlienDictionary(List<List<int>> adjList, int vertices, List<int> topoList)
+        {
+            int[] degreeArray = new int[vertices];
+
+            for (int i = 0; i < vertices; i++)
+            {
+                foreach (var item in adjList[i])
+                {
+                    degreeArray[item]++;
+                }
+            }
+
+            Queue<int> queue = new Queue<int>();
+
+            for(int i=0; i<degreeArray.Length;i++)
+            {
+                if (degreeArray[i] == 0)
+                {
+                    queue.Enqueue(i);
+                }
+            }
+
+            while (queue.Count != 0)
+            {
+                var elementToProcess = queue.Dequeue();
+                topoList.Add(elementToProcess + 'a');
+                foreach (var item in adjList[elementToProcess])
+                {
+                    degreeArray[item]--;
+                    if(degreeArray[item] == 0)
+                        queue.Enqueue(item);
+                }
+            }
+
+            return topoList;
+        }
+
+        public static int WordLadder(List<string> wordList, string startWord, string targetWord)
+        {
+            Queue<WordListPair> pairs = new Queue<WordListPair>();
+            pairs.Enqueue(new WordListPair(){ Index = 1, Word = startWord});
+
+            while (pairs.Count>0)
+            {
+                var pair = pairs.Dequeue();
+
+                if (pair.Word.Equals(targetWord)) return pair.Index;
+                for (int i = 0; i < pair.Word.Length; i++)
+                {
+                    for (char ch = 'a'; ch <= 'z'; ch++)
+                    {
+                        char[] replacedCharArray = pair.Word.ToCharArray();
+                        replacedCharArray[i] = ch;
+
+                        string replacedWord = replacedCharArray.ToString();
+
+                        if (wordList.Contains(replacedWord))
+                        {
+                            wordList.Remove(replacedWord);
+                            pairs.Enqueue(new WordListPair(){ Index = pair.Index +1, Word = replacedWord});
+                        }
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+        public static List<string> FindItinerary(List<List<string>> listOfTickets)
+        {
+            Dictionary<string, SortedSet<string>> adjDictList = new Dictionary<string, SortedSet<string>>();
+            List<string> ans = new List<string>();
+
+            foreach (var item in listOfTickets)
+            {
+                if(adjDictList.ContainsKey(item[0]))
+                {
+                    adjDictList[item[0]].Add(item[1]);
+                }
+                else
+                {
+                    adjDictList[item[0]] = new SortedSet<string>() {item[1]};
+                }
+            }
+
+            Stack<string> journeyStack = new Stack<string>();
+            
+            journeyStack.Push("JFK");
+
+            while (journeyStack.Count>0)
+            {
+                var element = journeyStack.Peek();
+                if (adjDictList.ContainsKey(element) && adjDictList[element].Count > 0)
+                {
+                    var nextDestination = adjDictList[element].FirstOrDefault();
+                    if (nextDestination != null) adjDictList[element].Remove(nextDestination);
+                    journeyStack.Push(nextDestination);
+                }
+                else
+                {
+                    ans.Add(journeyStack.Pop());
+                }
+            }
+
+            ans.Reverse();
+            return ans;
         }
     }
 }
