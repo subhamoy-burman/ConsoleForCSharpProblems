@@ -210,5 +210,27 @@ namespace ConsoleNeetCode.RevisionOne.Trees
 
             return false;
         }
+
+        public static List<int> GoodNodes(TreeNode node)
+        {
+            List<int> listOfGoodNodes = new List<int>();
+            CountGoodNodes(node, listOfGoodNodes, 0);
+            
+            return listOfGoodNodes;
+        }
+
+        private static void CountGoodNodes(TreeNode node, List<int> listOfGoodNodes, int max)
+        {
+            if(node is null) return;
+
+            if (node.Value >= max)
+            {
+                max = node.Value;
+                listOfGoodNodes.Add(node.Value);
+            }
+            
+            CountGoodNodes(node.Left, listOfGoodNodes, max);
+            CountGoodNodes(node.Right, listOfGoodNodes, max);
+        }
     }
 }

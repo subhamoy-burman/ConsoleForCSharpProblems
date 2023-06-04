@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConsoleNeetCode.RevisionOne.Trees;
 
 namespace ConsoleNeetCode.RevisionOne.Graphs
 {
@@ -463,6 +464,62 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
 
             ans.Reverse();
             return ans;
+        }
+
+        public class NodeDistancePair
+        {
+            public int Value { get; set; }
+            public int Distance { get; set; }
+        }
+        
+        public class GraphZeroIndexNode
+        {
+            public int DestinationNode { get; set; }
+            public int Weight { get; set; }
+        }
+        
+        public class DistanceComparer : IComparer<NodeDistancePair>
+        {
+            public int Compare(NodeDistancePair x, NodeDistancePair y)
+            {
+                // Compare based on the Distance property
+                return x.Distance.CompareTo(y.Distance);
+            }
+        }
+        public static int[] Dijkstra(int numOfVertices, List<List<GraphZeroIndexNode>> adjList, int source)
+        {
+            var pq = new PriorityQueue<NodeDistancePair, NodeDistancePair>(new DistanceComparer());
+
+            int[] dist = new int[numOfVertices];
+            for (int i = 0; i < numOfVertices; i++)
+            {
+                dist[i] = Int32.MaxValue;
+            }
+
+            NodeDistancePair sourceNodeDistancePair = new NodeDistancePair() {Value = source, Distance = 0};
+            pq.Enqueue(sourceNodeDistancePair, sourceNodeDistancePair);
+
+            while (pq.Count > 0)
+            {
+                var element = pq.Dequeue();
+
+                for (int i = 0; i < adjList[element.Value].Count; i++)
+                {
+                    int edgeWeight = adjList[element.Value][i].Weight;
+                    int adjNode = adjList[element.Value][i].DestinationNode;
+
+                    if (element.Distance + edgeWeight < dist[adjNode])
+                    {
+                        dist[adjNode] = element.Distance + edgeWeight;
+                        var nodeDistancePair = new NodeDistancePair() {Distance = dist[adjNode], Value = adjNode};
+                        pq.Enqueue(nodeDistancePair, nodeDistancePair);
+                        
+                    }
+                }
+            }
+
+            return dist;
+
         }
     }
 }

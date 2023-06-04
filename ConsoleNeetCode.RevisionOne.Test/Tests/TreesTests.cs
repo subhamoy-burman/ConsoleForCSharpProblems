@@ -99,5 +99,50 @@ namespace ConsoleNeetCode.RevisionOne.Test
             List<int> trees = Trees.Trees.RootToNodePath(root, 7);
         }
         
+        
+        [Test]
+        public void GoodNodes_ReturnsCorrectResult()
+        {
+            // Arrange
+            TreeNode root = new TreeNode(3);
+            root.Left = new TreeNode(1);
+            root.Right = new TreeNode(4);
+            root.Left.Left = new TreeNode(3);
+            root.Right.Left = new TreeNode(1);
+            root.Right.Right = new TreeNode(5);
+
+            List<int> expected = new List<int> { 3, 4, 5 };
+
+            // Act
+            List<int> result = Trees.Trees.GoodNodes(root);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+        
+        [Test]
+        public void GoodNodes_ReturnsCorrectResult2()
+        {
+            // Arrange
+            TreeNode root = new TreeNode(3)
+            {
+                Left = new TreeNode(3)
+                {
+                    Right = new TreeNode(4)
+                    {
+                        Left = new TreeNode(2)
+                    }
+                }
+            };
+
+            List<int> expected = new List<int> { 3 };
+
+            // Act
+            List<int> result = Trees.Trees.GoodNodes(root);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, result);
+        }
+        
     }
 }
