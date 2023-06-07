@@ -521,5 +521,81 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
             return dist;
 
         }
+        
+        public class GraphRowColDistance
+        {
+            public int Row { get; set; }
+            public int Col { get; set; }
+            public int Distance { get; set; }
+        }
+        
+        public class EffortComparer : IComparer<GraphRowColDistance>
+        {
+            public int Compare(GraphRowColDistance x, GraphRowColDistance y)
+            {
+                // Compare based on the Distance property
+                return x.Distance.CompareTo(y.Distance);
+            }
+        }
+
+        public static int MinimumEffort(int[,] grid)
+        {
+            var pq = new PriorityQueue<GraphRowColDistance, GraphRowColDistance>(new EffortComparer());
+
+            int row = grid.GetLength(0);
+            int col = grid.GetLength(1);
+
+            int[,] distanceArray = new int[row, col];
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    distanceArray[i,j] = Int32.MaxValue;
+                }
+            }
+
+            distanceArray[0, 0] = 0;
+            var initialNode = new GraphRowColDistance() {Row = 0, Col = 0, Distance = 0};
+            pq.Enqueue(initialNode, initialNode);
+
+            int[] deltaRow = new[] {-1, 0, 1, 0};
+            int[] deltaCol = new[] {0, 1, 0, -1};
+            
+            if (pq.Count > 0)
+            {
+                var element = pq.Dequeue();
+                int diff = element.Distance;
+                int rowVal = element.Row;
+                int colVal = element.Col;
+
+                if (rowVal == row - 1 && colVal == col - 1)
+                {
+                    return diff;
+                }
+
+                for (int i = 0; i < 4; i++)
+                {
+                    int newRow = rowVal + deltaRow[i];
+                    int newCol = colVal + deltaCol[i];
+
+                    if (newRow >= 0 && newRow < row && newCol >= 0 && newCol < col)
+                    {
+                        int newEffort = Math.Max(Math.Abs(grid[newRow, newCol]) - Math.Abs(grid[rowVal, colVal]), diff);
+                        if (newEffort < distanceArray[newRow, newCol])
+                        {
+                            distanceArray[newRow, newCol] = newEffort;
+                        }
+                    }
+                }
+            }
+
+            return 0;
+
+        }
+            
+        
+
+        
     }
 }

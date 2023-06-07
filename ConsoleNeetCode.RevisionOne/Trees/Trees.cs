@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleNeetCode.RevisionOne.Trees
 {
@@ -231,6 +232,103 @@ namespace ConsoleNeetCode.RevisionOne.Trees
             
             CountGoodNodes(node.Left, listOfGoodNodes, max);
             CountGoodNodes(node.Right, listOfGoodNodes, max);
+        }
+        
+        public static TreeNode BuildTreeFromInorderAndPreOrder(int[] preOrder, int[] inOrder)
+        {
+            int totalIndex = preOrder.Length;
+
+            return BuildTree(preOrder, inOrder, 0, totalIndex - 1, 0, totalIndex - 1);
+        }
+
+        private static TreeNode BuildTree(int[] preOrder, int[] inOrder, int preOrderStartIndex, int preOrderEndIndex, int inOrderStartIndex, int inOrderEndIndex)
+        {
+            if (preOrderStartIndex > preOrderEndIndex || inOrderStartIndex > inOrderEndIndex)
+            {
+                return null;
+            }
+            TreeNode node = new TreeNode(preOrder[preOrderStartIndex]);
+
+            int inorderRootIndex = Array.IndexOf(inOrder, node.Value);
+            int numOfElementsOnLeftTree = inorderRootIndex - inOrderStartIndex;
+            node.Left = BuildTree(preOrder, inOrder, preOrderStartIndex + 1,
+                preOrderStartIndex + numOfElementsOnLeftTree, inOrderStartIndex, inorderRootIndex - 1);
+            node.Right = BuildTree(preOrder, inOrder, preOrderStartIndex + numOfElementsOnLeftTree + 1,
+                preOrderEndIndex, inorderRootIndex + 1, inOrderEndIndex);
+
+            return node;
+        }
+
+        public static TreeNode SerializeAndDeserialize(TreeNode root)
+        {
+            List<string> serialized = Serialize(root);
+            TreeNode deserializedTree = Deserialize(serialized);
+            return deserializedTree;
+        }
+
+        private static TreeNode Deserialize(List<string> input)
+        {
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            TreeNode root = new TreeNode(Convert.ToInt32(input.FirstOrDefault()));
+            queue.Enqueue(root);
+
+            for (int i = 1; i < input.Count; i += 2)  // Increment by 2 to skip both left and right child markers
+            {
+                TreeNode parent = queue.Dequeue();
+
+                if (input[i] != "#")
+                {
+                    TreeNode left = new TreeNode(Convert.ToInt32(input[i]));
+                    parent.Left = left;
+                    queue.Enqueue(left);
+                }
+
+                if (input[i+1] != "#")
+                {
+                    TreeNode right = new TreeNode(Convert.ToInt32(input[i+1]));
+                    parent.Right = right;
+                    queue.Enqueue(right);
+                }
+            }
+
+            return root;
+        }
+
+        private static List<string> Serialize(TreeNode root)
+        {
+            Queue<TreeNode> levels = new Queue<TreeNode>();
+            levels.Enqueue(root);
+            List<string> serializedString = new List<string>() { root.Value.ToString()};
+
+            while (levels.Count>0)
+            {
+                var elementCount = levels.Count;
+                for (int i = 0; i < elementCount; i++)
+                {
+                    var element = levels.Dequeue();
+                    if (element.Left != null)
+                    {
+                        serializedString.Add(element.Left.Value.ToString());
+                        levels.Enqueue(element.Left);
+                    }
+                    else
+                    {
+                        serializedString.Add("#");
+                    }
+
+                    if (element.Right != null)
+                    {
+                        serializedString.Add(element.Right.Value.ToString());
+                        levels.Enqueue(element.Right);
+                    }
+                    else
+                    {
+                        serializedString.Add("#");
+                    }
+                }
+            }
+
+            return serializedString;
         }
     }
 }

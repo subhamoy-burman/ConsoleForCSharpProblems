@@ -144,5 +144,48 @@ namespace ConsoleNeetCode.RevisionOne.Test
             CollectionAssert.AreEqual(expected, result);
         }
         
+        [Test]
+        public void BuildTreeFromInorderAndPreOrder_ReturnsCorrectTree()
+        {
+            // Arrange
+            int[] preOrder = { 1, 2, 4, 5, 3, 6 };
+            int[] inOrder = { 4, 2, 5, 1, 6, 3 };
+
+            // Act
+            TreeNode result = Trees.Trees.BuildTreeFromInorderAndPreOrder(preOrder, inOrder);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(1, result.Value);
+            Assert.NotNull(result.Left);
+            Assert.AreEqual(2, result.Left.Value);
+            Assert.NotNull(result.Right);
+            Assert.AreEqual(3, result.Right.Value);
+            Assert.NotNull(result.Left.Left);
+            Assert.AreEqual(4, result.Left.Left.Value);
+            Assert.NotNull(result.Left.Right);
+            Assert.AreEqual(5, result.Left.Right.Value);
+            Assert.NotNull(result.Right.Left);
+            Assert.AreEqual(6, result.Right.Left.Value);
+        }
+        
+        
+        [Test]
+        public void Serialize_ReturnsCorrectSerializationString()
+        {
+            // Arrange
+            TreeNode root = new TreeNode(1);
+            root.Left = new TreeNode(2);
+            root.Right = new TreeNode(3);
+            root.Right.Left = new TreeNode(4);
+            root.Right.Right = new TreeNode(5);
+
+            // Act
+            var result = Trees.Trees.SerializeAndDeserialize(root);
+
+            // Assert
+            //List<string> expected = new List<string> { "1", "2", "3", "#", "#", "4", "5", "#", "#" };
+            //Assert.AreEqual(expected, result);
+        }
     }
 }

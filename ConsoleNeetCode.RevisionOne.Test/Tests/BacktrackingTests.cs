@@ -25,5 +25,11 @@ namespace ConsoleNeetCode.RevisionOne.Test
             // Assert
             CollectionAssert.AreEquivalent(expected, result);
         }
+
+        [Test]
+        public void SubsetSumTest()
+        {
+            var result = Backtracking.SubSetSum(new int[] {3, 1, 4});
+        }
     }
 }
