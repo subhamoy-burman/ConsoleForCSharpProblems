@@ -593,6 +593,37 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
             return 0;
 
         }
+
+        public static int[] BellmanFord(int vertices, List<GraphZeroIndexNode> edges, int startPoint)
+        {
+            int[] distanceArray = new int[vertices];
+
+            for (int i = 0; i < distanceArray.Length; i++)
+            {
+                distanceArray[i] = Int32.MaxValue;
+            }
+            distanceArray[startPoint] = 0;
+
+            for (int i = 0; i < vertices - 1; i++)
+            {
+                int index = 0;
+                foreach (var item in edges)
+                {
+                    int start = index;
+                    int destination = item.DestinationNode;
+                    int weight = item.Weight;
+
+                    if (distanceArray[start] != Int32.MaxValue &&
+                        distanceArray[start] + weight < distanceArray[destination])
+                    {
+                        distanceArray[destination] = distanceArray[start] + weight;
+                    }
+                }
+            }
+
+            return distanceArray;
+
+        }
             
         
 

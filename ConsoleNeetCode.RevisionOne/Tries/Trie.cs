@@ -58,5 +58,33 @@ public class Trie
 
         return (curr.WordEnd == 1);
     }
+
+    public void Delete(string s)
+    {
+        var curr = _root;
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            int index = s[i] - 'a';
+            if (curr.Child[index] != null)
+            {
+                curr = curr.Child[index];
+            }
+            else
+            {
+                Console.WriteLine("Word doesn't exist");
+                break;
+            }
+        }
+
+        if (curr.WordEnd != 0)
+        {
+            curr.WordEnd--;
+        }
+        else
+        {
+            Console.WriteLine("Word doesn't exist");
+        }
+    }
     
 }

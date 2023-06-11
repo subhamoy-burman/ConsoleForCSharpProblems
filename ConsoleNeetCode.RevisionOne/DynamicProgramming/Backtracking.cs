@@ -92,5 +92,89 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
             sumSoFar.Remove(arr[index]);
             SolveSubsetSum(index+1, arr, sumList, sumSoFar);
         }
+
+        public static List<List<int>> PrintAllPermutations(int[] nums)
+        {
+            HashSet<int> map = new HashSet<int>();
+            var answerList = new List<List<int>>();
+            
+            SolvePrintAllPermutation(nums, new List<int>(), map, answerList);
+            return answerList;
+        }
+
+        private static void SolvePrintAllPermutation(int[] nums, List<int> ans, HashSet<int> map, List<List<int>> answerList)
+        {
+            if (ans.Count == nums.Length)
+            {
+                answerList.Add(new List<int>(ans));
+                return;
+            }
+            
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (!map.Contains(nums[i]))
+                {
+                    map.Add(nums[i]);
+                    ans.Add(nums[i]);
+                    SolvePrintAllPermutation(nums,ans,map, answerList);
+                    map.Remove(nums[i]);
+                    ans.Remove(nums[i]);
+                }
+            }
+        }
+
+        public class GridIndex
+        {
+            public int RowIndex { get; set; }
+            public int ColIndex { get; set; }
+        }
+        
+        public bool WordSearch(List<List<char>> grid, string target)
+        {
+            int numOfRows = grid.Count;
+            int numOfColumns = grid[0].Count;
+
+            var visited = new HashSet<(int, int)>();
+
+            for (int i = 0; i < numOfRows; i++)
+            {
+                for (int j = 0; j < numOfColumns; j++)
+                {
+                    if (target[0].Equals(grid[i][j]))
+                    {
+                        if (WordSearchDFS(i, j, 0, target, grid, visited))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        private static bool WordSearchDFS(int rowIndex, int colIndex, int currIndex, string target, List<List<char>> grid, HashSet<(int, int)> visited)
+        {
+            if (currIndex == target.Length)
+            {
+                return true;
+            }
+
+            if (rowIndex < 0 && colIndex < 0 && rowIndex >= grid.Count && colIndex >= grid[0].Count
+                && visited.Contains((rowIndex, colIndex)) && target[currIndex] != grid[rowIndex][colIndex])
+            {
+                return false;
+            }
+
+            visited.Add((rowIndex, colIndex));
+
+            bool result = WordSearchDFS(rowIndex + 1, colIndex, currIndex + 1, target, grid, visited) ||
+                          WordSearchDFS(rowIndex - 1, colIndex, currIndex + 1, target, grid, visited)
+                          || WordSearchDFS(rowIndex, colIndex -1, currIndex + 1, target, grid, visited) ||
+                          WordSearchDFS(rowIndex , colIndex + 1, currIndex + 1, target, grid, visited);
+            
+            visited.Remove((rowIndex, colIndex));
+            return result;
+        }
     }
 }
