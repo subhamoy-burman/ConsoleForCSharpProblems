@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
+using ConsoleNeetCode.RevisionOne.Graphs;
 using NUnit.Framework;
 
 namespace ConsoleNeetCode.RevisionOne.Test
@@ -200,6 +201,29 @@ namespace ConsoleNeetCode.RevisionOne.Test
 
             // Assert
             CollectionAssert.AreEqual(new List<string>() { "JFK","MUC","LHR","SFO","SJC" }, result);
+        }
+        
+        
+        [Test]
+        public void MinCostToConnectAllPoints_ShouldReturnCorrectCost()
+        {
+            // Arrange
+            List<GridIndex> points = new List<GridIndex>
+            {
+                new GridIndex { RowIndex = 0, ColIndex = 0 },
+                new GridIndex { RowIndex = 2, ColIndex = 2 },
+                new GridIndex { RowIndex = 3, ColIndex = 10 },
+                new GridIndex { RowIndex = 5, ColIndex = 2 },
+                new GridIndex { RowIndex = 7, ColIndex = 0 }
+            };
+
+            int expectedCost = 20;
+
+            // Act
+            int actualCost = Graphs.Graphs.MinCostToConnectAllPoints(points);
+
+            // Assert
+            Assert.AreEqual(expectedCost, actualCost);
         }
     }
 }

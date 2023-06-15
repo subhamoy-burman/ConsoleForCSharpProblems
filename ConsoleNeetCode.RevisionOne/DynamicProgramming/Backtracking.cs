@@ -129,7 +129,7 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
             public int ColIndex { get; set; }
         }
         
-        public bool WordSearch(List<List<char>> grid, string target)
+        public static bool WordSearch(List<List<char>> grid, string target)
         {
             int numOfRows = grid.Count;
             int numOfColumns = grid[0].Count;
@@ -175,6 +175,103 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
             
             visited.Remove((rowIndex, colIndex));
             return result;
+        }
+
+        public static bool SolveSudoku(int[,] board)
+        {
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+                for (int j = 0; j < board.GetLength(1); j++)
+                {
+                    if (board[i, j] == '.')
+                    {
+                        for (char c = '1'; c <= 9; c++)
+                        {
+                            if (isSudokuFillValid(i, j, board, c))
+                            {
+                                board[i, j] = c;
+                                if (SolveSudoku(board))
+                                {
+                                    return true;
+                                }
+                            }
+                            else
+                            {
+                                board[i, j] = '.';
+                            }
+                        }
+
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        private static bool isSudokuFillValid(int rowIndex, int colIndex, int[,] board, char c)
+        {
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+                if (board[rowIndex, i] == c)
+                {
+                    return false;
+                }
+
+                if (board[i, colIndex] == c)
+                {
+                    return false;
+                }
+                
+                //Check the 3x3 grid
+
+                if (board[rowIndex * (rowIndex / 3) + i / 3, colIndex * (colIndex / 3) + i % 3] == c)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+
+        public static bool IsMColoringPossible(List<List<int>> graph, int[] color, int startNode, int mColors)
+        {
+            int n = graph.Count;
+            return SolveMColoring(0, graph, color, n, mColors);
+        }
+
+        private static bool SolveMColoring(int node, List<List<int>> graph, int[] color, int n, int mColors)
+        {
+            if (node == n)
+            {
+                return true;
+            }
+
+            for (int i = 1; i <= mColors; i++)
+            {
+                if (isSafeColoring(node, graph, i, color))
+                {
+                    color[node] = i;
+                    if (SolveMColoring(node + 1, graph, color, n, mColors))
+                    {
+                        return true;
+                    }
+                    color[node] = 0;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool isSafeColoring(int node, List<List<int>> graph, int itemColor, int[] color)
+        {
+            foreach (var item in graph[node])
+            {
+                if (color[item] == itemColor) return false;
+            }
+
+            return true;
         }
     }
 }

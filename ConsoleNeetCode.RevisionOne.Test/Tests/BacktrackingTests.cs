@@ -52,5 +52,26 @@ namespace ConsoleNeetCode.RevisionOne.Test
                 CollectionAssert.AreEqual(expected[i], actual[i]);
             }
         }
+        
+        [Test]
+        public void IsMColoringPossible_GivenValidGraphAndColors_ReturnsTrue()
+        {
+            // Arrange
+            List<List<int>> graph = new List<List<int>>
+            {
+                new List<int> { 1, 2 },
+                new List<int> { 0, 2 },
+                new List<int> { 0, 1 }
+            };
+            int[] color = new int[3];
+            int startNode = 0;
+            int mColors = 3;
+
+            // Act
+            bool result = Backtracking.IsMColoringPossible(graph, color, startNode, mColors);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
     }
 }

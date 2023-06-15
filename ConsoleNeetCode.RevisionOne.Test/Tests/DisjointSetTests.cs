@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ConsoleNeetCode.RevisionOne.Graphs;
 using NUnit.Framework;
 
@@ -27,5 +28,37 @@ namespace ConsoleNeetCode.RevisionOne.Test
             
             Assert.AreEqual(disjointSet.FindUltimateParent(3), disjointSet.FindUltimateParent(7));
         }
+
+        [Test]
+        public void TestDisjointTest2()
+        {
+            DisjointSetRevision1 ds = new DisjointSetRevision1(7);
+            ds.UnionByRank(1, 2);
+            ds.UnionByRank(2, 3);
+            ds.UnionByRank(4, 5);
+            ds.UnionByRank(6, 7);
+            ds.UnionByRank(5, 6);
+
+            // Check if 3 and 7 are in the same set
+            
+            
+            Assert.AreNotEqual(ds.FindUltimateParent(3), ds.FindUltimateParent(7));
+
+            ds.UnionByRank(3, 7);
+            Assert.AreEqual(ds.FindUltimateParent(3), ds.FindUltimateParent(7));
+
+            // if (ds.FindUPar(3) == ds.FindUPar(7))
+            // {
+            //     Console.WriteLine("Same");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Not Same");
+            // }
+        }
+        
+        
+        
+        
     }
 }

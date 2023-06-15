@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConsoleNeetCode.RevisionOne.DynamicProgramming;
 using ConsoleNeetCode.RevisionOne.Trees;
 
 namespace ConsoleNeetCode.RevisionOne.Graphs
@@ -624,9 +625,77 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
             return distanceArray;
 
         }
-            
-        
 
+
+        public class WeightNodePair
+        {
+            public int Weight { get; set; }
+            public int Node { get; set; }
+        }
+        
+        public class WeightComparer : IComparer<WeightNodePair>
+        {
+            public int Compare(WeightNodePair x, WeightNodePair y)
+            {
+                // Compare based on the Distance property
+                return x.Weight.CompareTo(y.Weight);
+            }
+        }
+
+        public static int MinCostToConnectAllPoints(List<GridIndex> points)
+        {
+            int N = points.Count;
+            Dictionary<int, List<int[]>> adjacencyList = new Dictionary<int, List<int[]>>();
+
+            for (int i = 0; i < N; i++)
+            {
+                GridIndex point = points[i];
+                int xCoordinate = point.RowIndex;
+                int yCoordinate = point.ColIndex;
+
+                adjacencyList[i] = new List<int[]>();
+
+                for (int j = i + 1; j < N; j++)
+                {
+                    GridIndex pointToConnect = points[j];
+                    int dist = Math.Abs(xCoordinate - pointToConnect.RowIndex) +
+                               Math.Abs(yCoordinate - pointToConnect.ColIndex);
+                    
+                    adjacencyList[i].Add(new int[]{ dist, j});
+                    adjacencyList[j].Add(new []{ dist, i});
+                }
+            }
+
+            int sum = 0;
+
+            PriorityQueue<WeightNodePair, WeightNodePair> pq = new PriorityQueue<WeightNodePair, WeightNodePair>( new WeightComparer());
+            WeightNodePair weightNodePair = new WeightNodePair() {Node = 0, Weight = 0};
+            pq.Enqueue(weightNodePair,weightNodePair);
+
+            int[] visited = new int[N];
+
+            while (pq.Count>0)
+            {
+                var minElement = pq.Dequeue();
+
+                if (visited[minElement.Node] != 1)
+                {
+                    sum += minElement.Weight;
+                    visited[minElement.Node] = 1;
+                    foreach (var item in adjacencyList[minElement.Node])
+                    {
+                        if (visited[item[1]] != 1)
+                        {
+                            var weightPairNode = new WeightNodePair() {Weight = item[0], Node = item[1]};
+                            pq.Enqueue(weightPairNode, weightPairNode);
+                        }
+                    }
+                }
+
+            }
+
+            return sum;
+        }
         
     }
 }
