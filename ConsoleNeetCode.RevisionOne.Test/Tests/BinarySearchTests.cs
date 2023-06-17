@@ -66,4 +66,34 @@ public class BinarySearchTests
         Assert.AreEqual(-1, result.Item1);  // Empty array, so first occurrence should be -1
         Assert.AreEqual(-1, result.Item2);  // Empty array, so last occurrence should be -1
     }
+    
+    [Test]
+    public void SearchInRotatedSortedArray_ReturnsCorrectIndex()
+    {
+        // Arrange
+        int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
+        int target = 0;
+        int expectedIndex = 4;
+
+        // Act
+        int actualIndex = BinarySearch.BinarySearch.SearchInRotatedSortedArray(arr, target);
+
+        // Assert
+        Assert.AreEqual(expectedIndex, actualIndex);
+    }
+
+    [Test]
+    public void SearchInRotatedSortedArray_ReturnsMinusOneForNotFound()
+    {
+        // Arrange
+        int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
+        int target = 8;
+        int expectedIndex = -1;
+
+        // Act
+        int actualIndex = BinarySearch.BinarySearch.SearchInRotatedSortedArray(arr, target);
+
+        // Assert
+        Assert.AreEqual(expectedIndex, actualIndex);
+    }
 }

@@ -6,6 +6,7 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
     {
         private readonly List<int> _rank = new();
         private readonly List<int> _parent = new();
+        private readonly List<int> _size = new();
 
         public DisjointSet(int n)
         {
@@ -13,6 +14,7 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
             {
                 _rank.Add(0);
                 _parent.Add(i);
+                _size.Add(1);
             }
         }
 
@@ -47,6 +49,23 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
                 _rank[ultimateParentU]++;
             }
 
+        }
+
+        public void UnionBySize(int u, int v)
+        {
+            int ultimateParentU = FindUltimateParent(u);
+            int ultimateParentV = FindUltimateParent(v);
+
+            if (_size[ultimateParentU] > _size[ultimateParentV])
+            {
+                _parent[ultimateParentV] = ultimateParentU;
+                _size[ultimateParentU] += _size[ultimateParentV];
+            }
+            else
+            {
+                _parent[ultimateParentU] = ultimateParentV;
+                _size[ultimateParentV] += _size[ultimateParentU];
+            }
         }
     }
 }

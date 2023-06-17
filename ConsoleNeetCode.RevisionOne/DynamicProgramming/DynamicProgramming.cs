@@ -474,6 +474,55 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
 
             return CalculateUniqueGridPaths(rowIndex - 1, colIndex) + CalculateUniqueGridPaths(rowIndex, colIndex - 1);
         }
+
+        public static List<List<string>> PalindromePartitioning(string inputString)
+        {
+            List<List<string>> listOfPalindromes = new List<List<string>>();
+            List<string> path = new List<string>();
+
+            SolvePalindromePartitioning(0, inputString, path, listOfPalindromes);
+            return listOfPalindromes;
+        }
+
+        private static void SolvePalindromePartitioning(int index, string inputString, List<string> path, List<List<string>> listOfPalindromes)
+        {  
+            if (index == inputString.Length)
+            {
+                listOfPalindromes.Add(new List<string>(path));
+                return;
+            }
+
+            for (int i = index; i < inputString.Length; i++)
+            {
+                if (IsPalindrome(inputString, index, i))
+                {
+                    path.Add(inputString.Substring(index,i-index+1));
+                    SolvePalindromePartitioning(i+1,inputString,path,listOfPalindromes);
+                    path.RemoveAt(path.Count-1);
+                }
+            }
+        }
+
+        private static bool IsPalindrome(string input, int startIndex, int endIndex)
+        {
+            if (endIndex < 0)
+            {
+                return false;
+            }
+
+            while (startIndex<=endIndex)
+            {
+                if (input[startIndex] != input[endIndex])
+                {
+                    return false;
+                }
+
+                startIndex++;
+                endIndex--;
+            }
+
+            return true;
+        }
     }
     
 }

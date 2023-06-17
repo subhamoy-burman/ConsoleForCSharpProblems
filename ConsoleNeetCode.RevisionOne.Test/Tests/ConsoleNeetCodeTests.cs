@@ -225,5 +225,20 @@ namespace ConsoleNeetCode.RevisionOne.Test
             // Assert
             Assert.AreEqual(expectedCost, actualCost);
         }
+        
+        [Test]
+        public void PalindromePartitioning_WithNonPalindromeString_ReturnsListOfPalindromes()
+        {
+            // Arrange
+            string inputString = "aab";
+
+            // Act
+            var result = DynamicProgramming.DynamicProgramming.PalindromePartitioning(inputString);
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
+            Assert.Contains("aa", result);
+            Assert.Contains("b", result);
+        }
     }
 }
