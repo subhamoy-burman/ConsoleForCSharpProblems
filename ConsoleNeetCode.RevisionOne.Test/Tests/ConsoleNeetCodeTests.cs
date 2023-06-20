@@ -240,5 +240,21 @@ namespace ConsoleNeetCode.RevisionOne.Test
             Assert.Contains("aa", result);
             Assert.Contains("b", result);
         }
+        
+        
+        [Test]
+        public void FindLongestCommonSubstring_WithValidInputs_ReturnsCorrectLength()
+        {
+            // Arrange
+            string input1 = "abcdefgh";
+            string input2 = "abxyzefgh";
+            int expectedLength = 4;
+        
+            // Act
+            int actualLength = DynamicProgramming.DynamicProgramming.FindLongestCommonSubstring(input1, input2);
+        
+            // Assert
+            Assert.AreEqual(expectedLength, actualLength);
+        }
     }
 }

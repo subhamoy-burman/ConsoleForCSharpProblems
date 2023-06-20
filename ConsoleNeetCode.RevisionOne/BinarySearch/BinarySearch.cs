@@ -162,4 +162,30 @@ public static class BinarySearch
 
         return -1;
     }
+
+
+    public static int MinimumInRotatedSortedArray(int[] arr)
+    {
+        int low = 0;
+        int high = arr.Length - 1;
+        int ans = Int32.MaxValue;
+
+        while (low<=high)
+        {
+            int mid = (high + low) / 2;
+
+            if (arr[low] <= arr[mid])
+            {
+                ans = Math.Min(ans, arr[low]);
+                low = mid + 1;
+            }
+            else
+            {
+                ans = Math.Min(ans, arr[mid]);
+                high = mid - 1;
+            }
+        }
+
+        return ans;
+    }
 }

@@ -523,6 +523,37 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
 
             return true;
         }
+
+        static int maxLength = 0;
+        public static int FindLongestCommonSubstring(string input1, string input2)
+        {
+            int index1 = input1.Length - 1;
+            int index2 = input2.Length - 1;
+            int currentLength = 0;
+            
+            var curr = ProcessLongestCommonSubString(index1, index2, input1, input2, currentLength);
+            return maxLength;
+        }
+
+        private static int ProcessLongestCommonSubString(int index1, int index2, string input1, string input2, int currentLength)
+        {
+            if (index1 <0 ||  index2<0)
+            {   
+                return currentLength;
+            }
+
+            if (input1[index1] == input2[index2])
+            {
+                currentLength++;
+                maxLength = Math.Max(maxLength, currentLength);
+                return ProcessLongestCommonSubString(index1 - 1, index2 - 1, input1, input2, currentLength);
+            }
+            else
+            {
+                return Math.Max(ProcessLongestCommonSubString(index1 - 1, index2, input1, input2, 0),
+                    ProcessLongestCommonSubString(index1, index2 - 1, input1, input2, 0));
+            }
+        }
     }
     
 }
