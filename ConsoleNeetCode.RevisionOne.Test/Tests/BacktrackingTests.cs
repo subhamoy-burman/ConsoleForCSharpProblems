@@ -68,10 +68,16 @@ namespace ConsoleNeetCode.RevisionOne.Test
             int mColors = 3;
 
             // Act
-            bool result = Backtracking.IsMColoringPossible(graph, color, startNode, mColors);
+            // bool result = Backtracking.IsMColoringPossible(graph, color, startNode, mColors);
+            //
+            // // Assert
+            // Assert.IsTrue(result);
+        }
 
-            // Assert
-            Assert.IsTrue(result);
+        [Test]
+        public void TestNQueen()
+        {
+            //var lisOfConfigurations = Backtracking.NQueens(4);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ConsoleNeetCode.RevisionOne.DynamicProgramming;
 using ConsoleNeetCode.RevisionOne.Trees;
+// ReSharper disable PossibleNullReferenceException
 
 namespace ConsoleNeetCode.RevisionOne.Graphs
 {
@@ -696,6 +697,119 @@ namespace ConsoleNeetCode.RevisionOne.Graphs
 
             return sum;
         }
+
+        public class Node
+        {
+            public int NodeIndex { get; set; }
+            public int DestinationNodeIndex { get; set; }
+            public int Weight { get; set; }
+
+            public Node(int u, int v, int w)
+            {
+                NodeIndex = u;
+                DestinationNodeIndex = v;
+                Weight = w;
+            }
+        }
+
+        public class SortComparer : IComparer<Node>
+        {
+            public int Compare(Node x, Node y)
+            {
+                if (x.Weight < y.Weight)
+                {
+                    return -1;
+                }
+
+                if (x.Weight > y.Weight)
+                {
+                    return 1;
+                }
+
+                return 0;
+            }
+        }
         
+        private static int FindPar(int u, int[] parent)
+        {
+            if (u == parent[u]) return u;
+            return parent[u] = FindPar(parent[u], parent);
+        }
+
+        private static void Union(int u, int v, int[] parent, int[] rank)
+        {
+            u = FindPar(u, parent);
+            v = FindPar(v, parent);
+            if (rank[u] < rank[v])
+            {
+                parent[u] = v;
+            }
+            else if (rank[v] < rank[u])
+            {
+                parent[v] = u;
+            }
+            else
+            {
+                parent[v] = u;
+                rank[u]++;
+            }
+        }
+
+        public static List<Node> Kruskal(List<Node> adjMatrix, int N)
+        {
+            adjMatrix.Sort(new SortComparer());
+
+            int[] parent = new int[N];
+            int[] rank = new int[N];
+
+            for (int i = 0; i < N; i++)
+            {
+                parent[i] = i;
+                rank[i] = 0;
+            }
+
+            int costMst = 0;
+            List<Node> mst = new List<Node>();
+
+            foreach (var item in adjMatrix)
+            {
+                if (FindPar(item.NodeIndex, parent) != FindPar(item.DestinationNodeIndex, parent))
+                {
+                    costMst = costMst + item.Weight;
+                    mst.Add(item);
+                    Union(item.NodeIndex, item.DestinationNodeIndex, parent, rank);
+                }
+            }
+            
+            Console.WriteLine(costMst);
+
+            foreach (var item in mst)
+            {
+                Console.WriteLine(item.NodeIndex + " - " + item.DestinationNodeIndex);
+            }
+
+            return mst;
+        }
+
+        public static int NumberOfConnectedComponents(List<Tuple<int,int>> listOfInput, int N)
+        {    
+            int[] parent = new int[N];
+            int[] rank = new int[N];
+
+            for (int i = 0; i < N; i++)
+            {
+                parent[i] = i;
+                rank[i] = 0;
+            }
+
+            foreach (var item in listOfInput)
+            {
+                Union(item.Item1,item.Item2, parent, rank);
+            }
+            
+            Console.WriteLine();
+            return -1;
+        }
+
     }
 }
