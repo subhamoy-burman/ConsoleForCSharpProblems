@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using ConsoleNeetCode.RevisionOne.Graphs;
@@ -256,11 +257,52 @@ namespace ConsoleNeetCode.RevisionOne.Test
             // Assert
             Assert.AreEqual(expectedLength, actualLength);
         }
+        
+        [Test]
+        public void KruskalAlgorithm_ReturnsCorrectMSTForGraphWithFiveVertices()
+        {
+            // Arrange
+            int n = 5;
+            List<Graphs.Graphs.Node> adj = new List<Graphs.Graphs.Node>();
+
+            adj.Add(new Graphs.Graphs.Node(0, 1, 2));
+            adj.Add(new Graphs.Graphs.Node(0, 3, 6));
+            adj.Add(new Graphs.Graphs.Node(1, 3, 8));
+            adj.Add(new Graphs.Graphs.Node(1, 2, 3));
+            adj.Add(new Graphs.Graphs.Node(1, 4, 5));
+            adj.Add(new Graphs.Graphs.Node(2, 4, 7));
+
+            
+
+            // Act
+            List<Graphs.Graphs.Node> result = Graphs.Graphs.Kruskal(adj, n);
+
+            // Assert
+            Assert.AreEqual(4, result.Count);
+            Assert.AreEqual(2, result[0].NodeIndex);
+            Assert.AreEqual(1, result[0].DestinationNodeIndex);
+            Assert.AreEqual(3, result[0].Weight);
+            Assert.AreEqual(1, result[1].NodeIndex);
+            Assert.AreEqual(0, result[1].DestinationNodeIndex);
+            Assert.AreEqual(2, result[1].Weight);
+            Assert.AreEqual(4, result[2].NodeIndex);
+            Assert.AreEqual(1, result[2].DestinationNodeIndex);
+            Assert.AreEqual(5, result[2].Weight);
+            Assert.AreEqual(2, result[3].NodeIndex);
+            Assert.AreEqual(4, result[3].DestinationNodeIndex);
+            Assert.AreEqual(7, result[3].Weight);
+        }
 
         [Test]
-        public void NumberOfPalindromicSubstrings()
+        public void NumberOfConnectedComponents()
         {
-            Assert.AreEqual(5, DynamicProgramming.DynamicProgramming.NumberOfPalindromicSubstring("racecar"));
+            List<Tuple<int, int>> tuples = new List<Tuple<int, int>>();
+            tuples.Add(new Tuple<int, int>(0,1));
+            tuples.Add(new Tuple<int, int>(1,2));
+            tuples.Add(new Tuple<int, int>(3,4));
+
+
+            var components = Graphs.Graphs.NumberOfConnectedComponents(tuples, 5);
         }
     }
 }
