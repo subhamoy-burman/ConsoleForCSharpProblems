@@ -256,5 +256,11 @@ namespace ConsoleNeetCode.RevisionOne.Test
             // Assert
             Assert.AreEqual(expectedLength, actualLength);
         }
+
+        [Test]
+        public void NumberOfPalindromicSubstrings()
+        {
+            Assert.AreEqual(5, DynamicProgramming.DynamicProgramming.NumberOfPalindromicSubstring("racecar"));
+        }
     }
 }
