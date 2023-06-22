@@ -187,5 +187,28 @@ namespace ConsoleNeetCode.RevisionOne.Test
             //List<string> expected = new List<string> { "1", "2", "3", "#", "#", "4", "5", "#", "#" };
             //Assert.AreEqual(expected, result);
         }
+        
+        [Test]
+        public void PrintBoundaryTraversal_ShouldReturnCorrectBoundaryNodes2()
+        {
+            // Arrange
+            TreeNode root = new TreeNode(1);
+            root.Left = new TreeNode(2);
+            root.Left.Left = new TreeNode(3);
+            root.Left.Right = new TreeNode(4);
+            root.Left.Right.Left = new TreeNode(5);
+            root.Left.Right.Right = new TreeNode(6);
+            root.Right = new TreeNode(7);
+            root.Right.Left = new TreeNode(8);
+            root.Right.Right = new TreeNode(9);
+
+            List<int> expectedBoundary = new List<int>() { 1, 2, 3, 5, 6, 8, 9 };
+
+            // Act
+            List<int> actualBoundary = Trees.Trees.PrintBoundaryOfTree(root);
+
+            // Assert
+            CollectionAssert.AreEqual(expectedBoundary, actualBoundary);
+        }
     }
 }

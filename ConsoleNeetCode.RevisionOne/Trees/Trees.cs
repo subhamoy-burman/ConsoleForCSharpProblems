@@ -330,5 +330,77 @@ namespace ConsoleNeetCode.RevisionOne.Trees
 
             return serializedString;
         }
+        
+        public static List<int> PrintBoundaryOfTree(TreeNode root)
+        {
+            List<int> treeBoundary = new List<int>();
+            if (root == null)
+            {
+                return treeBoundary;
+            }
+
+            if (IsLeaf(root))
+            {
+                treeBoundary.Add(root.Value);
+                return treeBoundary;
+            }
+
+            treeBoundary.Add(root.Value);
+            AddLeftBoundary(root.Left, treeBoundary);
+            AddLeaves(root, treeBoundary);
+            AddRightBoundary(root.Right, treeBoundary);
+
+            return treeBoundary;
+        }
+
+        private static void AddRightBoundary(TreeNode root, List<int> treeBoundary)
+        {   
+            if (IsLeaf(root) || root is null)
+            {
+                return;
+            }
+
+            treeBoundary.Add(root.Value);
+            
+            if (root.Right is null)
+            {
+                AddLeftBoundary(root.Left, treeBoundary);
+            }
+            else
+            {
+                AddLeftBoundary(root.Right, treeBoundary);
+            }
+            
+        }
+
+        private static void AddLeaves(TreeNode node, List<int> treeBoundary)
+        {
+            if (node.Left is null && node.Right is null)
+            {
+                treeBoundary.Add(node.Value);
+                return;
+            }
+            if(node.Left!=null) AddLeaves(node.Left,  treeBoundary);
+            if(node.Right!=null) AddLeaves(node.Right, treeBoundary);
+        }
+
+        private static void AddLeftBoundary(TreeNode root, List<int> treeBoundary)
+        {
+            if (IsLeaf(root) || root is null)
+            {
+                return;
+            }
+
+            treeBoundary.Add(root.Value);
+            
+            if (root.Left is null)
+            {
+                AddLeftBoundary(root.Right, treeBoundary);
+            }
+            else
+            {
+                AddLeftBoundary(root.Left, treeBoundary);
+            }
+        }
     }
 }
