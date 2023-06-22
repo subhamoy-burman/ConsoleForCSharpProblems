@@ -554,6 +554,49 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
                     ProcessLongestCommonSubString(index1, index2 - 1, input1, input2, 0));
             }
         }
+
+        public static int NumberOfPalindromicSubstring(string inputString)
+        {
+            int count = 0;
+            int[,] dpArray = new int[inputString.Length,inputString.Length];
+
+            for (int m = 0; m < dpArray.GetLength(0); m++)
+            {
+                for (int n = 0; n < dpArray.GetLength(0); n++)
+                {
+                    dpArray[m,n] = -1;
+                }
+            }
+            
+            for (int i = 0; i < inputString.Length; i++)
+            {
+                for (int j = i; j < inputString.Length; j++)
+                {
+                    count = count + RecursiveNumberOfPalindromicSubstring(inputString, i, j, dpArray);
+                }
+            }
+
+            return count;
+        }
+
+        private static int RecursiveNumberOfPalindromicSubstring(string inputString, int i, int j, int[,] dpArray)
+        {   
+            if (i == j)
+            {
+                return dpArray[i,j] = 1;
+            }
+            
+            if (dpArray[i, j] != -1)
+            {
+                return dpArray[i, j];
+            }
+            else
+            {
+                return dpArray[i,j] = inputString[i] == inputString[j]
+                    ? RecursiveNumberOfPalindromicSubstring(inputString, i + 1, j - 1, dpArray)
+                    : 0;
+            }
+        }
     }
     
 }
