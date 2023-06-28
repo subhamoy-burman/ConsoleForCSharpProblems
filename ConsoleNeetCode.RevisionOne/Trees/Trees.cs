@@ -330,27 +330,5 @@ namespace ConsoleNeetCode.RevisionOne.Trees
 
             return serializedString;
         }
-
-        public static bool IsTreeSymmetric(TreeNode root)
-        {
-            return root ==null || IsTreeSymmetricRec(root.Left, root.Right);
-        }
-
-        private static bool IsTreeSymmetricRec(TreeNode rootLeft, TreeNode rootRight)
-        {
-            if (rootLeft is null && rootRight is null)
-            {
-                return true;
-            }
-
-            if (rootLeft != null && rootRight != null)
-            {
-                return (rootLeft.Value == rootRight.Value) 
-                       && IsTreeSymmetricRec(rootLeft.Left, rootRight.Right)
-                       && IsTreeSymmetricRec(rootLeft.Right, rootRight.Left);
-            }
-
-            return false;
-        }
     }
 }

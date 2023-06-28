@@ -187,54 +187,5 @@ namespace ConsoleNeetCode.RevisionOne.Test
             //List<string> expected = new List<string> { "1", "2", "3", "#", "#", "4", "5", "#", "#" };
             //Assert.AreEqual(expected, result);
         }
-        
-        [Test]
-        public void IsTreeSymmetric_SymmetricTree_ReturnsTrue()
-        {
-            // Arrange
-            TreeNode root = new TreeNode(1);
-            root.Left = new TreeNode(2);
-            root.Right = new TreeNode(2);
-            root.Left.Left = new TreeNode(3);
-            root.Left.Right = new TreeNode(4);
-            root.Right.Left = new TreeNode(4);
-            root.Right.Right = new TreeNode(3);
-
-            // Act
-            bool result = Trees.Trees.IsTreeSymmetric(root);
-
-            // Assert
-            Assert.IsTrue(result);
-        }
-        
-        [Test]
-        public void IsTreeSymmetric_NonSymmetricTree_ReturnsFalse()
-        {
-            // Arrange
-            TreeNode root = new TreeNode(1);
-            root.Left = new TreeNode(2);
-            root.Right = new TreeNode(2);
-            root.Left.Right = new TreeNode(3);
-            root.Right.Right = new TreeNode(3);
-
-            // Act
-            bool result = Trees.Trees.IsTreeSymmetric(root);
-
-            // Assert
-            Assert.IsFalse(result);
-        }
-
-        [Test]
-        public void IsTreeSymmetric_EmptyTree_ReturnsTrue()
-        {
-            // Arrange
-            TreeNode root = null;
-
-            // Act
-            bool result = Trees.Trees.IsTreeSymmetric(root);
-
-            // Assert
-            Assert.IsTrue(result);
-        }
     }
 }
