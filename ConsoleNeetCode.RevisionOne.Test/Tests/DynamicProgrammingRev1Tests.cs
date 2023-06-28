@@ -1,4 +1,5 @@
-﻿using ConsoleNeetCode.RevisionOne.DynamicProgramming;
+﻿using System;
+using ConsoleNeetCode.RevisionOne.DynamicProgramming;
 using NUnit.Framework;
 
 namespace ConsoleNeetCode.RevisionOne.Test;
@@ -18,5 +19,51 @@ public class DynamicProgrammingRev1Tests
 
         // Assert
         Assert.AreEqual(3, result);
+    }
+    
+    [Test]
+    public void MinimumNoOfCoins_Example1()
+    {
+        int[] coins = { 1, 2, 5 };
+        int target = 11;
+        int expected = 3;
+
+        int result = DynamicProgrammingRev1.MinimumNoOfCoins(coins, target);
+
+        Assert.AreEqual(expected, result);
+    }
+
+    [Test]
+    public void MinimumNoOfCoins_Example2()
+    {
+        int[] coins = { 2 };
+        int target = 3;
+        int expected = Int32.MaxValue;
+
+        int result = DynamicProgrammingRev1.MinimumNoOfCoins(coins, target);
+
+        Assert.AreEqual(expected, result);
+    }
+
+    [Test]
+    public void MinimumNoOfCoins_Example3()
+    {
+        int[] coins = { 1, 3, 4 };
+        int target = 6;
+        int expected = 2;
+
+        int result = DynamicProgrammingRev1.MinimumNoOfCoins(coins, target);
+
+        Assert.AreEqual(expected, result);
+    }
+    
+    [Test]
+    public void TestCoinChange2_Example1()
+    {
+        int[] coins = { 1, 2, 5 };
+        int target = 5;
+        int expected = 4;
+        int actual = DynamicProgrammingRev1.CoinChange2(coins, target);
+        Assert.AreEqual(expected, actual);
     }
 }
