@@ -187,5 +187,30 @@ namespace ConsoleNeetCode.RevisionOne.Test
             //List<string> expected = new List<string> { "1", "2", "3", "#", "#", "4", "5", "#", "#" };
             //Assert.AreEqual(expected, result);
         }
+        
+        [Test]
+        public void LowestCommonAncestor_ShouldReturnCorrectNode()
+        {
+            // Arrange
+            // Create a binary tree for testing
+            TreeNode root = new TreeNode(3);
+            root.Left = new TreeNode(5);
+            root.Right = new TreeNode(1);
+            root.Left.Left = new TreeNode(6);
+            root.Left.Right = new TreeNode(2);
+            root.Left.Right.Left = new TreeNode(7);
+            root.Left.Right.Right = new TreeNode(4);
+            root.Right.Left = new TreeNode(0);
+            root.Right.Right = new TreeNode(8);
+
+            int num1 = 5;
+            int num2 = 1;
+
+            // Act
+            TreeNode lowestCommonAncestor = Trees.Trees.LowestCommonAncestor(root, num1, num2);
+
+            // Assert
+            Assert.AreEqual(3, lowestCommonAncestor.Value);
+        }
     }
 }

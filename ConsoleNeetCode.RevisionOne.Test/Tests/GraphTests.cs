@@ -31,4 +31,24 @@ public class GraphTests
         // Assert
         Assert.AreEqual(expectedOutput, actualOutput);
     }
+    
+    [Test]
+    public void NumberOfDistinctIslands_ShouldReturnCorrectCount()
+    {
+        // Arrange
+        int[,] inputMatrix = {
+            { 1, 1, 0, 1, 1 },
+            { 1, 0, 0, 0, 0 },
+            { 0, 0, 0, 0, 1 },
+            { 1, 1, 0, 1, 1 }
+        };
+
+        
+
+        // Act
+        int distinctIslands = Graphs.GraphRevTwo.NumberOfDistinctIslands(inputMatrix);
+
+        // Assert
+        Assert.AreEqual(3, distinctIslands);
+    }
 }

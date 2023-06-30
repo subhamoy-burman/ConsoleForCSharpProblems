@@ -330,5 +330,33 @@ namespace ConsoleNeetCode.RevisionOne.Trees
 
             return serializedString;
         }
+
+        public static TreeNode LowestCommonAncestor(TreeNode root, int num1, int num2)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+
+            if (root.Value == num1 || root.Value == num2)
+            {
+                return root;
+            }
+
+            var left = LowestCommonAncestor(root.Left, num1, num2);
+            var right = LowestCommonAncestor(root.Right, num1, num2);
+
+            if (left != null && right != null)
+            {
+                return root;
+            }
+
+            if (left != null)
+            {
+                return left;
+            }
+            
+            return right;
+        }
     }
 }

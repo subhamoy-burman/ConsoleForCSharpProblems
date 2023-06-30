@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace ConsoleNeetCode.RevisionOne.StackQueueV1;
@@ -48,5 +49,86 @@ public static class StackQueue1
             }
         }
         
+    }
+
+    public class TwoStackUsingAnArray
+    {
+        public int[] arr { get; set; }
+        public int Size { get; set; }
+        public int Top1 { get; set; }
+        public int Top2 { get; set; }
+
+        public TwoStackUsingAnArray(int size)
+        {
+            arr = new int[size];
+            Size = size;
+            Top1 = -1;
+            Top2 = size;
+        }
+
+        void Push1(int item)
+        {
+            if (Top2 - Top1 == 1)
+            {
+                return;
+            }
+
+            arr[++Top1] = item;
+        }
+
+        void Push2(int item)
+        {
+            if (Top2 - Top1 == 1)
+            {
+                return;
+            }
+
+            arr[--Top2] = item;
+        }
+
+        void Pop1()
+        {
+            if (Top1 == -1)
+            {
+                //underflow
+                return;
+            }
+
+            Top1--;
+        }
+
+        void Pop2()
+        {
+            if (Top2 == Size)
+            {
+                //underflow
+                return;
+            }
+
+            Top2++;
+        }
+        
+    }
+
+    public static int FindMiddleElementOfStack(Stack<int> inputStack)
+    {
+        int targetSize = (int)Math.Ceiling((double)inputStack.Count/2);
+        return FuncFindMidElementOfStack(targetSize, inputStack);
+    }
+
+    private static int FuncFindMidElementOfStack(int targetSize,  Stack<int> inputStack)
+    {
+        if (inputStack.Count == targetSize)
+        {
+            return inputStack.Peek();
+        }
+
+        var temp = inputStack.Pop();
+
+        var value = FuncFindMidElementOfStack(targetSize, inputStack);
+        
+        inputStack.Push(temp);
+
+        return value;
     }
 }

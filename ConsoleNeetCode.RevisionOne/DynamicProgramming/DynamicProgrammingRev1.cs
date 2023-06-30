@@ -132,4 +132,65 @@ public static class DynamicProgrammingRev1
 
         return pickCoin + notPickCoin;
     }
+
+    public static int UnboundedKnapsack(int[] val, int[] weights)
+    {
+        int capacity = 100;
+
+        int[,] dpArray = new int[val.Length, weights.Length];
+        // Initialize all DP array to -1
+        return FuncCalculateKnapsack(val.Length - 1, capacity, val, weights, dpArray);
+    }
+
+    private static int FuncCalculateKnapsack(int index, int capacity, int[] val, int[] weights, int[,] dpArray)
+    {
+        if (index == 0)
+        {
+            return capacity / weights[0] * val[0];
+        }
+
+        if (dpArray[index, capacity] != -1)
+        {
+            return dpArray[index, capacity];
+        }
+        
+        int notPicking = FuncCalculateKnapsack(index - 1, capacity, val, weights, dpArray);
+
+        int picking = 0;
+
+        if (weights[index] <= capacity)
+        {
+            picking = val[index] + FuncCalculateKnapsack(index, capacity - weights[index], val, weights, dpArray);
+        }
+
+        dpArray[index, capacity] = Math.Max(picking, notPicking);
+        return dpArray[index, capacity];
+    }
+
+    public static int RodCutting(int[] values, int target)
+    {
+        int N = values.Length;
+
+        return FuncRodCutting(0, N, values);
+    }
+
+    private static int FuncRodCutting(int index, int rodLength, int[] values)
+    {
+        if (index == 0)
+        {
+            return values[0] * rodLength;
+        }
+        
+        int picking = Int32.MinValue;
+        int currentRodLength = index + 1;
+        
+        if (currentRodLength <= rodLength)
+        {
+            picking = values[index] + FuncRodCutting(index, rodLength - currentRodLength, values);
+        }
+
+        int notPicking = FuncRodCutting(index - 1, rodLength, values);
+
+        return Math.Max(picking, notPicking);
+    }
 }

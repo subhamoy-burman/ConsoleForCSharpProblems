@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ConsoleNeetCode.RevisionOne.StackQueueV1;
 using NUnit.Framework;
 
@@ -16,5 +17,23 @@ public class StackQueueTests
         stackExtend.Push(8);
 
         var poppedValue = stackExtend.Pop();
+    }
+    
+    [Test]
+    public void FindMiddleElementOfStack_StackWithOddCount_ReturnsMiddleElement()
+    {
+        // Arrange
+        Stack<int> stack = new Stack<int>();
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+        stack.Push(4);
+        stack.Push(5);
+
+        // Act
+        int result = StackQueue1.FindMiddleElementOfStack(stack);
+
+        // Assert
+        Assert.AreEqual(3, result);
     }
 }
