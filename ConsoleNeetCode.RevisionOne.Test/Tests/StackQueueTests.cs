@@ -36,4 +36,37 @@ public class StackQueueTests
         // Assert
         Assert.AreEqual(3, result);
     }
+
+    [Test]
+    public void LongestValidParenthesesTest()
+    {
+        int result = StackQueue1.LongestValidParentheses("()(()");
+    }
+    
+    [Test]
+    public void NextSmallerElements_ValidInput_ReturnsCorrectResult()
+    {
+        // Arrange
+        int[] input = { 4, 2, 5, 1, 3 };
+        int[] expectedOutput = { 2, 1, 1, -1, -1 };
+
+        // Act
+        int[] result = StackQueue1.NextSmallerElements(input);
+
+        // Assert
+        Assert.AreEqual(expectedOutput, result);
+    }
+
+    [Test]
+    public void NextSmallerElements_EmptyInput_ReturnsEmptyArray()
+    {
+        // Arrange
+        int[] input = new int[0];
+
+        // Act
+        int[] result = StackQueue1.NextSmallerElements(input);
+
+        // Assert
+        Assert.IsEmpty(result);
+    }
 }

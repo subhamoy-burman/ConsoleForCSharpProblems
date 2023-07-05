@@ -107,6 +107,47 @@ public class LinkedListV1
             }
         }
     }
+
+    public static LLNode SortZeroOneTwoLinkedList(LLNode head)
+    {
+        LLNode zeroFirstNode = new LLNode(-1);
+        LLNode oneFirstNode = new LLNode(-1);
+        LLNode twoFirstNode = new LLNode(-1);
+
+        var temp = head;
+        var zeroNode = zeroFirstNode;
+        var oneNode = oneFirstNode;
+        var twoNode = twoFirstNode;
+        
+        while (temp!=null)
+        {
+            if (temp.Value == 0)
+            {
+                zeroNode.Next = new LLNode(0);
+                zeroNode = zeroNode.Next;
+            }
+
+            if (temp.Value == 1)
+            {
+                oneNode.Next = new LLNode(1);
+                oneNode = oneNode.Next;
+            }
+
+            if (temp.Value == 2)
+            {
+                twoNode.Next = new LLNode(2);
+                twoNode = twoNode.Next;
+            }
+
+            temp = temp.Next;
+        }
+
+        zeroNode.Next = oneFirstNode.Next;
+        oneNode.Next = twoFirstNode.Next;
+
+        return zeroFirstNode.Next;
+
+    }
     
     public static LLNode ReverseLinkedListByKNode(LLNode head, int k)
     {

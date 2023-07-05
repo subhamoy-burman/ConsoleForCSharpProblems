@@ -120,4 +120,27 @@ public class LinkedListTests
         Assert.AreEqual(5, result.Next.Next.Next.Next.Value);
     }
     
+    [Test]
+    public void SortZeroOneTwoLinkedListTest()
+    {
+        // Arrange
+        LinkedListV1.LinkedListV1.LLNode head = new LinkedListV1.LinkedListV1.LLNode(0);
+        head.Next = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next.Next = new LinkedListV1.LinkedListV1.LLNode(0);
+        head.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(2);
+        head.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(2);
+        head.Next.Next.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next.Next.Next.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(2);
+
+        
+
+        // Act
+        LinkedListV1.LinkedListV1.LLNode result = LinkedListV1.LinkedListV1.SortZeroOneTwoLinkedList(head);
+
+        // Assert
+        
+    }
+    
 }

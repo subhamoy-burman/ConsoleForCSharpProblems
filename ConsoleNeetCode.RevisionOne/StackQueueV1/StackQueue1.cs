@@ -126,9 +126,65 @@ public static class StackQueue1
         var temp = inputStack.Pop();
 
         var value = FuncFindMidElementOfStack(targetSize, inputStack);
-        
         inputStack.Push(temp);
-
         return value;
+    }
+    
+    public static int LongestValidParentheses(string s)
+    {
+        Stack<int> stack = new();
+        int max = Int32.MinValue;
+        stack.Push(-1);
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (s[i] == '(')
+            {
+                stack.Push(i);
+            }
+            else
+            {
+                stack.Pop();
+                if(stack.Count>0)
+                     max = Math.Max(max,i - stack.Peek());
+            }
+
+            if (stack.Count == 0)
+            {
+                stack.Push(i);
+            }
+        }
+
+        return max == Int32.MaxValue ? 0 : max;
+    }
+
+    public static int[] NextSmallerElements(int[] arr)
+    {
+        Stack<int> elementStack = new Stack<int>();
+        int k = arr.Length;
+        int[] outputArray = new int[k];
+        elementStack.Push(-1);
+        elementStack.Push(arr[k-1]);
+        outputArray[--k] = -1;
+
+        for (int i = arr.Length - 2; i >= 0; i--)
+        {
+            if (arr[i] >= elementStack.Peek())
+            {
+                outputArray[--k] = elementStack.Peek();
+                elementStack.Push(arr[i]);
+            }
+            else
+            {
+                while (elementStack.Peek()> arr[i])
+                {
+                    elementStack.Pop();
+                }
+                outputArray[--k] = elementStack.Peek();
+                elementStack.Push(arr[i]);
+            }
+        }
+
+        return outputArray;
     }
 }
