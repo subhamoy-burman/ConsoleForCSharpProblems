@@ -212,5 +212,46 @@ namespace ConsoleNeetCode.RevisionOne.Test
             // Assert
             Assert.AreEqual(3, lowestCommonAncestor.Value);
         }
+        
+        [Test]
+        public void TopViewOnBinaryTree_ReturnsCorrectVerticalLevels()
+        {
+            // Arrange
+            TreeRevision.TreeNodeRev treeNode = new TreeRevision.TreeNodeRev(1);
+            treeNode.Left = new TreeRevision.TreeNodeRev(2);
+            treeNode.Right = new TreeRevision.TreeNodeRev(3);
+            treeNode.Left.Right = new TreeRevision.TreeNodeRev(4);
+            treeNode.Left.Right.Right = new TreeRevision.TreeNodeRev(5);
+            treeNode.Left.Right.Right.Right = new TreeRevision.TreeNodeRev(6);
+
+            
+
+            // Act
+            List<int> result = TreeRevision.TopViewOnBinaryTree(treeNode);
+
+            // Assert
+            List<int> expected = new List<int> { 2, 1, 3, 6 };
+            Assert.AreEqual(expected, result);
+        }
+        
+        [Test]
+        public void BottomViewOfBinaryTree_ReturnsCorrectVerticalLevels()
+        {
+            // Arrange
+            TreeRevision.TreeNodeRev treeNode = new TreeRevision.TreeNodeRev(1);
+            treeNode.Left = new TreeRevision.TreeNodeRev(2);
+            treeNode.Right = new TreeRevision.TreeNodeRev(3);
+            treeNode.Left.Right = new TreeRevision.TreeNodeRev(4);
+            treeNode.Right.Left = new TreeRevision.TreeNodeRev(5);
+            treeNode.Right.Right = new TreeRevision.TreeNodeRev(6);
+
+
+            // Act
+            List<int> result = TreeRevision.BottomViewOfBinaryTree(treeNode);
+
+            // Assert
+            List<int> expected = new List<int> { 2, 4, 3, 6 };
+            Assert.AreEqual(expected, result);
+        }
     }
 }
