@@ -79,5 +79,26 @@ namespace ConsoleNeetCode.RevisionOne.Test
         {
             //var lisOfConfigurations = Backtracking.NQueens(4);
         }
+        
+        [Test]
+        public void TestPrintAllPermutations2()
+        {
+            int[] nums = { 1, 2, 3 };
+            List<List<int>> expected = new List<List<int>>()
+            {
+                new List<int>(){1,2,3},
+                new List<int>(){1,3,2},
+                new List<int>(){2,1,3},
+                new List<int>(){2,3,1},
+                new List<int>(){3,1,2},
+                new List<int>(){3,2,1}
+            };
+            var actual = Backtracking.GetAllPermutations(nums);
+            Assert.AreEqual(expected.Count, actual.Count);
+            for (int i = 0; i < expected.Count; i++)
+            {
+                CollectionAssert.AreEqual(expected[i], actual[i]);
+            }
+        }
     }
 }

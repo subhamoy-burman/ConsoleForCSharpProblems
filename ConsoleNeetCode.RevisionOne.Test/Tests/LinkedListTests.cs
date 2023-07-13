@@ -143,4 +143,28 @@ public class LinkedListTests
         
     }
     
+    [Test]
+    public void RotateALinkedList_ShouldRotateLinkedListByKPositions()
+    {
+        // Arrange
+        LinkedListV1.LinkedListV1.LLNode head = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next = new LinkedListV1.LinkedListV1.LLNode(2);
+        head.Next.Next = new LinkedListV1.LinkedListV1.LLNode(3);
+        head.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(4);
+        head.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(5);
+
+        int k = 2;
+
+        // Act
+        LinkedListV1.LinkedListV1.LLNode result = LinkedListV1.LinkedListV1.RotateALinkedList(head, k);
+
+        // Assert
+        Assert.AreEqual(4, result.Value);
+        Assert.AreEqual(5, result.Next.Value);
+        Assert.AreEqual(1, result.Next.Next.Value);
+        Assert.AreEqual(2, result.Next.Next.Next.Value);
+        Assert.AreEqual(3, result.Next.Next.Next.Next.Value);
+        Assert.IsNull(result.Next.Next.Next.Next.Next);
+    }
+    
 }

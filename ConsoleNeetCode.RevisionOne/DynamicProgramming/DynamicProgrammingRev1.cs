@@ -193,4 +193,75 @@ public static class DynamicProgrammingRev1
 
         return Math.Max(picking, notPicking);
     }
+
+    public static int DistinctSubsequences(string s1, string s2)
+    {
+        int[,] dpArray = new int[s1.Length + 1, s2.Length + 1];
+
+        for (int i = 0; i < dpArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < dpArray.GetLength(1); j++)
+            {
+                dpArray[i, j] = -1;
+            }
+        }
+        return SolveDistinctSubsequences(s1, s2, s1.Length - 1, s2.Length - 1, dpArray);
+    }
+
+    private static int SolveDistinctSubsequences(string s1, string s2, int index1, int index2, int[,] dpArray)
+    {
+        if (index2 < 0)
+        {
+            return 1;
+        }
+        
+        if (index1 < 0)
+        {
+            return 0;
+        }
+
+        if (dpArray[index1, index2] != -1)
+        {
+            return dpArray[index1, index2];
+        }
+
+        if (s1[index1] == s2[index2])
+        {
+            return dpArray[index1, index2] = SolveDistinctSubsequences(s1, s2, index1 - 1, index2 - 1, dpArray) +
+                   SolveDistinctSubsequences(s1, s2, index1 - 1, index2, dpArray);
+        }
+        else
+        {
+            return dpArray[index1, index2] = SolveDistinctSubsequences(s1, s2, index1 - 1, index2, dpArray);
+        }
+    }
+
+    //Not Tested
+    private static int SolveDistinctSubsequencesTabulation(string s1, string s2, int[,] dpArray)
+    {
+        for (int j = 0; j < s1.Length; j++)
+        {
+            dpArray[0, j] = 0;
+        }
+
+        for (int i = 0; i < s2.Length; i++)
+        {
+            dpArray[i, 0] = 1;
+        }
+
+        for (int m = 1; m < s1.Length; m++)
+        {
+            for (int n = 1; n < s2.Length; n++)
+            {
+                if(s1[m-1] == s2[n-1] )
+                    dpArray[m, n] = dpArray[m - 1, n - 1] + dpArray[m - 1, n];
+                else
+                {
+                    dpArray[m, n] = dpArray[m - 1, n];
+                }
+            }
+        }
+
+        return dpArray[s1.Length, s2.Length];
+    }
 }

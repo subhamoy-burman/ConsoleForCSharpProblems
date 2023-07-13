@@ -66,4 +66,19 @@ public class DynamicProgrammingRev1Tests
         int actual = DynamicProgrammingRev1.CoinChange2(coins, target);
         Assert.AreEqual(expected, actual);
     }
+    
+    [Test]
+    public void DistinctSubsequences_ValidInput_ReturnsCorrectResult()
+    {
+        // Arrange
+        string s1 = "rabbbit";
+        string s2 = "rabbit";
+        int expectedOutput = 3;
+
+        // Act
+        int result = DynamicProgrammingRev1.DistinctSubsequences(s1, s2);
+
+        // Assert
+        Assert.AreEqual(expectedOutput, result);
+    }
 }

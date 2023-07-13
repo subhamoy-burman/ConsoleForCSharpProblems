@@ -176,5 +176,45 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
             visited.Remove((rowIndex, colIndex));
             return result;
         }
+
+        public static List<List<int>> GetAllPermutations(int[] arr)
+        {
+            List<List<int>> permutationList = new List<List<int>>();
+            HashSet<int> freqMap = new HashSet<int>();
+            List<int> localList = new List<int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                freqMap.Add(i);
+                localList.Add(arr[i]);
+                SolveGetAllPermutations(i, freqMap, localList, permutationList, arr);
+                freqMap.Clear();
+                localList.Clear();
+            }
+
+            return permutationList;
+        }
+
+        private static void SolveGetAllPermutations(int index, HashSet<int> freqMap, List<int> localList, List<List<int>> globalList, int[] arr)
+        {
+            if (freqMap.Count == arr.Length)
+            {
+                globalList.Add(new List<int>(localList));
+                return;
+            }
+            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (freqMap.Contains(i))
+                {
+                    continue;
+                }
+                localList.Add(arr[i]);
+                freqMap.Add(i);
+                SolveGetAllPermutations(i+1, freqMap, localList, globalList, arr);
+                localList.Remove(arr[i]);
+                freqMap.Remove(i);
+            }
+        }
     }
 }

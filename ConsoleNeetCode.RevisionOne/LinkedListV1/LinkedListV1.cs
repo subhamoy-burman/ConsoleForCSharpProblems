@@ -223,5 +223,27 @@ public class LinkedListV1
         return prev;
     }
 
+    public static LLNode RotateALinkedList(LLNode head, int k)
+    {
+        LLNode curr = head;
+        int nodeCount = 0;
+        LLNode kthNode = null;
+
+        while (curr.Next!=null)
+        {
+            if (++nodeCount == k)
+            {
+                kthNode = curr;
+            }
+            curr = curr.Next;
+        }
+
+        curr.Next = head;
+        head = kthNode.Next;
+
+        kthNode.Next = null;
+
+        return head;
+    }
     
 }
