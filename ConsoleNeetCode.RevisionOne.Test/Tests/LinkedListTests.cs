@@ -167,4 +167,28 @@ public class LinkedListTests
         Assert.IsNull(result.Next.Next.Next.Next.Next);
     }
     
+    [Test]
+    public void TestMergeNodes()
+    {
+        // Create the input linked list: [0, 3, 1, 0, 4, 5, 2, 0]
+        LinkedListV1.LinkedListV1.LLNode head = new LinkedListV1.LinkedListV1.LLNode(0);
+        head.Next = new LinkedListV1.LinkedListV1.LLNode(3);
+        head.Next.Next = new LinkedListV1.LinkedListV1.LLNode(1);
+        head.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(0);
+        head.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(4);
+        head.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(5);
+        head.Next.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(2);
+        head.Next.Next.Next.Next.Next.Next.Next = new LinkedListV1.LinkedListV1.LLNode(0);
+
+        // Create the expected output linked list: [4, 11]
+        LinkedListV1.LinkedListV1.LLNode expected = new LinkedListV1.LinkedListV1.LLNode(4);
+        expected.Next = new LinkedListV1.LinkedListV1.LLNode(11);
+
+        // Merge nodes in the linked list
+        LinkedListV1.LinkedListV1.LLNode result = LinkedListV1.LinkedListV1.MergeNonZeroNodes(head);
+
+        // Compare the result with the expected output
+        Assert.AreEqual(result, expected);
+    }
+    
 }
