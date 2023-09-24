@@ -134,4 +134,6 @@ public static class GraphRevTwo
             }
         }
     }
+    
+    //public static bool CheckForCycle
 }

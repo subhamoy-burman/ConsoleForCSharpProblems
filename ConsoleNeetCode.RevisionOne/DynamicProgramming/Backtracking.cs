@@ -216,5 +216,48 @@ namespace ConsoleNeetCode.RevisionOne.DynamicProgramming
                 freqMap.Remove(i);
             }
         }
+
+        public static List<List<string>> PalindromePartitioning(string input)
+        {
+            List<string> currentPath = new List<string>();
+            List<List<string>> allPaths = new List<List<string>>();
+
+            PalindromePartitioningFunc(0, input, currentPath, allPaths);
+            return allPaths;
+        }
+
+        private static void PalindromePartitioningFunc(int index, string input, List<string> currentPath, List<List<string>> allPaths)
+        {
+            if (index == input.Length)
+            {
+                allPaths.Add(new List<string>(currentPath));
+                return;
+            }
+            for (int i = index; i < input.Length; ++i)
+            {
+                if (IsPalindrome(input, index, i))
+                {
+                    currentPath.Add(input.Substring(index, i - index + 1));
+                    PalindromePartitioningFunc(i + 1, input, currentPath, allPaths);
+                    currentPath.RemoveAt(currentPath.Count - 1);
+                }
+            }
+        }
+
+        private static bool IsPalindrome(string resultString, int start, int end)
+        {
+            while (start<=end)
+            {
+                if (resultString[start] != resultString[end])
+                {
+                    return false;
+                }
+
+                start++;
+                end--;
+            }
+
+            return true;
+        }
     }
 }
