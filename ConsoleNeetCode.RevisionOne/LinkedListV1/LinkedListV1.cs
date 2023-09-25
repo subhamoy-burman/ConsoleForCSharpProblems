@@ -345,5 +345,48 @@ public class LinkedListV1
 
         return head;
     }
-    
+
+    public static LLNode MergeNonZeroNodes(LLNode head)
+    {
+        head = head.Next;
+        LLNode curr = head;
+
+        while (curr!=null)
+        {
+            LLNode end = curr;
+            int sum = 0;
+            while (end.Value!=0)
+            {
+                sum = sum + end.Value;
+                end = end.Next;
+            }
+
+            curr.Value = sum;
+            curr.Next = end.Next;
+            curr = curr.Next;
+        }
+        
+        return head;
+    }
+
+    public static LLNode MergeNodesRec(LLNode head)
+    {
+        if (head.Next is null)
+        {
+            return null;
+        }
+
+        LLNode curr = head.Next;
+        int sum = 0;
+        while (curr.Value!=0)
+        {
+            sum = sum + curr.Value;
+            curr = curr.Next;
+        }
+
+        head.Next.Value = sum;
+        head.Next.Next = MergeNodesRec(curr);
+        return head.Next;
+    }
+
 }
