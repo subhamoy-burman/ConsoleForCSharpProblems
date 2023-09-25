@@ -81,4 +81,32 @@ public class DynamicProgrammingRev1Tests
         // Assert
         Assert.AreEqual(expectedOutput, result);
     }
+    
+    [Test]
+    public void LongestCommonSubstring_ShouldReturnCorrectLength_WhenInputsHaveCommonSubstring()
+    {
+        // Arrange
+        string input1 = "abcdef";
+        string input2 = "xyzdef";
+
+        // Act
+        int result = DynamicProgrammingRev1.LongestCommonSubstring(input1, input2);
+
+        // Assert
+        Assert.AreEqual(3, result);
+    }
+
+    [Test]
+    public void LongestCommonSubstring_ShouldReturnZero_WhenInputsHaveNoCommonSubstring()
+    {
+        // Arrange
+        string input1 = "abcdef";
+        string input2 = "xyz123";
+
+        // Act
+        int result = DynamicProgrammingRev1.LongestCommonSubstring(input1, input2);
+
+        // Assert
+        Assert.AreEqual(0, result);
+    }
 }

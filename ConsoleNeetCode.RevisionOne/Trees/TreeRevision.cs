@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ConsoleNeetCode.RevisionOne.Trees;
 
@@ -23,6 +24,44 @@ public static class TreeRevision
             this.Left = left;
             this.Right = right;
         }
+    }
+
+    public static void ChildrenSumTree(TreeNodeRev root)
+    {
+        if (root == null)
+        {
+            return;
+        }
+
+        int childSum = 0;
+        if (root.Left != null)
+        {
+            childSum += root.Left.Val;
+        }
+
+        if (root.Right != null)
+        {
+            childSum += root.Right.Val;
+        }
+
+        if (childSum >= root.Val)
+        {
+            root.Val = childSum;
+        }
+        else
+        {
+            if (root.Left != null) root.Left.Val = root.Val;
+            if (root.Right != null) root.Right.Val = root.Val;
+        }
+        
+        ChildrenSumTree(root.Left);
+        ChildrenSumTree(root.Right);
+
+        int total = 0;
+        if (root.Left != null) total += root.Left.Val;
+        if (root.Right != null) total += root.Right.Val;
+
+        if (root.Left != null || root.Right != null) root.Val = total;
     }
 
     public static List<int> TopViewOnBinaryTree(TreeNodeRev treeNode)
@@ -129,5 +168,77 @@ public static class TreeRevision
         }
 
         return verticalLevel;
+    }
+
+    public static List<int> NodesAtDistanceK(TreeNodeRev treeNodeRev, TreeNodeRev target, int k)
+    {
+        Dictionary<TreeNodeRev, TreeNodeRev> dictTreeNodeParent = new Dictionary<TreeNodeRev, TreeNodeRev>();
+        MarkParents(treeNodeRev, dictTreeNodeParent);
+
+        Dictionary<TreeNodeRev, bool> visited = new Dictionary<TreeNodeRev, bool>();
+        Queue<TreeNodeRev> queue = new Queue<TreeNodeRev>();
+        queue.Enqueue(target);
+        visited.Add(target,true);
+        int currLevel = 0;
+
+        while (queue.Count!=0)
+        {
+            int size = queue.Count;
+            if(currLevel == k) break;
+            currLevel++;
+
+            for (int i = 0; i < size; i++)
+            {
+                TreeNodeRev current = queue.Dequeue();
+                if (current.Left != null && !visited.ContainsKey(current.Left))
+                {
+                    queue.Enqueue(current.Left);
+                    visited.Add(current.Left, true);
+                }
+                
+                if (current.Right != null && !visited.ContainsKey(current.Right))
+                {
+                    queue.Enqueue(current.Right);
+                    visited.Add(current.Right, true);
+                }
+
+                if (dictTreeNodeParent.ContainsKey(current) && !visited.ContainsKey(dictTreeNodeParent[current]))
+                {
+                    queue.Enqueue(dictTreeNodeParent[current]);
+                    visited.Add(dictTreeNodeParent[current], true);
+                }
+            }
+        }
+
+        List<int> result = new List<int>();
+        while (queue.Count != 0)
+        {
+            TreeNodeRev current = queue.Dequeue();
+            result.Add(current.Val);
+        }
+
+        return result;
+    }
+
+    private static void MarkParents(TreeNodeRev treeNodeRev, Dictionary<TreeNodeRev, TreeNodeRev> dictTreeNodeParent)
+    {
+        Queue<TreeNodeRev> queue = new Queue<TreeNodeRev>();
+        queue.Enqueue(treeNodeRev);
+
+        while (queue.Count != 0)
+        {
+            TreeNodeRev current = queue.Dequeue();
+            if (current.Left != null)
+            {
+                dictTreeNodeParent.Add(current.Left, current);
+                queue.Enqueue(current.Left);
+            }
+
+            if (current.Right != null)
+            {
+                dictTreeNodeParent.Add(current.Right, current);
+                queue.Enqueue(current.Right);
+            }
+        }
     }
 }

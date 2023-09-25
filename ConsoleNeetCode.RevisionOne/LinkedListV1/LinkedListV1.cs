@@ -148,6 +148,106 @@ public class LinkedListV1
         return zeroFirstNode.Next;
 
     }
+
+    public static bool CheckLLPalindrome(LLNode head)
+    {
+        LLNode slow = head;
+        LLNode fast = head;
+
+        while (fast!=null)
+        {
+            if (fast.Next != null)
+            {
+                slow = slow.Next;
+                fast = fast.Next.Next;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        LLNode mid = slow;
+
+        LLNode prev = null;
+        LLNode curr = mid.Next;
+
+        while (curr!=null)
+        {
+            LLNode forward = curr.Next;
+            curr.Next = prev;
+            prev = curr;
+            curr = forward;
+        }
+
+        slow.Next = prev;
+
+        LLNode start = head;
+        while (prev != null)
+        {   
+            if (prev.Value != start.Value)
+            {
+                return false;
+            }
+            start = start.Next;
+            prev = prev.Next;
+        }
+
+        return true;
+    }
+    
+    public static LLNode ReturnStartOfCycle(LLNode head)
+    {
+        LLNode slow = head;
+        LLNode fast = head;
+
+        while (fast!=null)
+        {
+            fast = fast.Next;
+            if (fast != null)
+            {
+                fast = fast.Next;
+                slow = slow.Next;
+            }
+
+            if (fast == slow)
+            {
+                slow = head;
+                break;
+            }
+        }
+
+        while (slow != fast)
+        {
+            slow = slow.Next;
+            fast = fast.Next;
+        }
+
+        return slow;
+    }
+    
+    public static bool IsCyclePresentInLL(LLNode head)
+    {
+        LLNode slow = head;
+        LLNode fast = head;
+
+        while (fast!=null)
+        {
+            fast = fast.Next;
+            if (fast != null)
+            {
+                fast = fast.Next;
+                slow = slow.Next;
+            }
+
+            if (fast == slow)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     
     public static LLNode ReverseLinkedListByKNode(LLNode head, int k)
     {

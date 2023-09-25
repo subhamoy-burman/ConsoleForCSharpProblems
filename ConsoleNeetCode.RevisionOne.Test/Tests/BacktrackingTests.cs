@@ -100,5 +100,27 @@ namespace ConsoleNeetCode.RevisionOne.Test
                 CollectionAssert.AreEqual(expected[i], actual[i]);
             }
         }
+        
+        [Test]
+        public void PalindromePartitioning_Test()
+        {
+            // Arrange
+            string input = "aab";
+            List<List<string>> expected = new List<List<string>>
+            {
+                new List<string> { "a", "a", "b" },
+                new List<string> { "aa", "b" }
+            };
+
+            // Act
+            List<List<string>> actual = Backtracking.PalindromePartitioning(input);
+
+            // Assert
+            Assert.AreEqual(expected.Count, actual.Count);
+            for (int i = 0; i < expected.Count; i++)
+            {
+                CollectionAssert.AreEqual(expected[i], actual[i]);
+            }
+        }
     }
 }

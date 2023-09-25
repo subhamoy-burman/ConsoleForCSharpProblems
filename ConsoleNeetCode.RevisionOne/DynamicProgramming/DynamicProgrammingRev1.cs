@@ -264,4 +264,49 @@ public static class DynamicProgrammingRev1
 
         return dpArray[s1.Length, s2.Length];
     }
+
+    public static int LongestCommonSubstring(string input1, string input2)
+    {
+        var inputArr1 = input1.ToCharArray();
+        var inputArr2 = input2.ToCharArray();
+
+
+        int res = 0;
+
+        int[,] dpArray = new int[input1.Length + 1, input2.Length + 1];
+
+        for (int i = 0; i < dpArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < dpArray.GetLength(1); j++)
+            {
+                dpArray[i, j] = -1;
+            }
+        }
+
+        return FuncLongestCommonSubstring(inputArr1.Length-1, inputArr2.Length-1, inputArr1, inputArr2, res, dpArray);
+        
+    }
+
+    private static int FuncLongestCommonSubstring(int index1, int index2, char[] inputArr1, char[] inputArr2, int res, int[,] dpArray)
+    {
+        if (index1 == 0 || index2 == 0)
+        {
+            return res;
+        }
+
+        if (dpArray[index1, index2] != -1)
+        {
+            return dpArray[index1, index2];
+        }
+
+        if (inputArr1[index1] == inputArr2[index2])
+        {
+            res = FuncLongestCommonSubstring(index1 - 1, index2 - 1, inputArr1, inputArr2, res + 1, dpArray);
+        }
+
+        return dpArray[index1,index2] =  Math.Max(res, Math.Max(
+            FuncLongestCommonSubstring(index1 - 1, index2, inputArr1, inputArr2, 0, dpArray),
+            FuncLongestCommonSubstring(index1, index2 - 1, inputArr1, inputArr2, 0, dpArray)
+        ));
+    }
 }

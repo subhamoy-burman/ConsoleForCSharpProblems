@@ -7,6 +7,7 @@ namespace ConsoleNeetCode.RevisionOne.Test;
 [TestFixture]
 public class StackQueueTests
 {
+    
     [Test]
     public void TestPushInStackUsingQueue()
     {
