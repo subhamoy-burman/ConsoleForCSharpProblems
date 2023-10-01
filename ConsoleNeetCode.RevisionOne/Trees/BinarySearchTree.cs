@@ -1,3 +1,5 @@
+using System;
+
 namespace ConsoleNeetCode.RevisionOne.Trees;
 
 public static class BinarySearchTree
@@ -139,4 +141,43 @@ public static class BinarySearchTree
         
         FuncBSTKthSmallestNode(root.Right,ref k,ref value);
     }
+
+    public static BstDsNode FindLargestBstInBinaryTree(BSTNode root)
+    {
+        if (root is null)
+        {
+            return new BstDsNode(null, Int32.MaxValue, Int32.MinValue, 0);
+        }
+
+        BstDsNode left = FindLargestBstInBinaryTree(root.Left);
+        BstDsNode right = FindLargestBstInBinaryTree(root.Right);
+
+        if (root.Value > left.MaxValue && root.Value < right.MinValue)
+        {
+            return new BstDsNode(root.Value, left.MaxValue != Int32.MinValue ? Math.Min(root.Value, left.MaxValue): root.Value,
+                right.MinValue!= Int32.MaxValue ? Math.Max(root.Value, right.MinValue) : root.Value, 
+                1+ left.MaxSize + right.MaxSize);
+        }
+
+        return new BstDsNode(root.Value, Int32.MinValue, Int32.MaxValue, Math.Max(left.MaxSize, right.MaxSize));
+    }
+
+    public class BstDsNode
+    {
+        public int? Value { get; set; }
+        public int MinValue { get; set; }
+        public int MaxValue { get; set; }
+
+        public int MaxSize { get; set; }
+
+        public BstDsNode(int? value, int minValue, int maxValue, int maxSize)
+        {
+            Value = value;
+            MinValue = minValue;
+            MaxValue = maxValue;
+            MaxSize = maxSize;
+        }
+    }
+    
+    
 }

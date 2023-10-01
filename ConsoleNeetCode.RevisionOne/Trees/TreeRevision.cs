@@ -241,4 +241,71 @@ public static class TreeRevision
             }
         }
     }
+
+    public static List<int> PrintBoundaryTraversalInATree(TreeNodeRev treeNode)
+    {
+        List<int> treeNodes = new List<int>();
+        treeNodes.Add(treeNode.Val);
+
+        AddLeftTraversal(treeNode.Left, treeNodes);
+        AddLeafNodes(treeNode, treeNodes);
+        AddRightTraversal(treeNode.Right, treeNodes);
+
+        return treeNodes;
+    }
+
+    private static void AddRightTraversal(TreeNodeRev treeNode, List<int> treeNodes)
+    {
+        List<int> currentList = new List<int>();
+
+        while (treeNode!=null)
+        {
+            if (!IsLeafNode(treeNode))
+            {
+                currentList.Add(treeNode.Val);
+            }
+
+            treeNode = treeNode.Right ?? treeNode.Left;
+        }
+        currentList.Reverse();
+        treeNodes.AddRange(currentList);
+    }
+
+    private static void AddLeafNodes(TreeNodeRev treeNode, List<int> treeNodes)
+    {
+        if (treeNode is null)
+        {
+            return;
+        }
+        if (IsLeafNode(treeNode))
+        {
+            treeNodes.Add(treeNode.Val);
+            return;
+        }
+        AddLeafNodes(treeNode.Left, treeNodes);
+        AddLeafNodes(treeNode.Right, treeNodes);
+    }
+
+    public static bool IsLeafNode(TreeNodeRev node)
+    {
+        if (node.Left is null && node.Right is null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private static void AddLeftTraversal(TreeNodeRev treeNode, List<int> treeNodes)
+    {
+        while (treeNode!=null)
+        {
+            if (!IsLeafNode(treeNode))
+            {
+                treeNodes.Add(treeNode.Val);
+            }
+
+            treeNode = treeNode.Left ?? treeNode.Right;
+        }
+    }
 }

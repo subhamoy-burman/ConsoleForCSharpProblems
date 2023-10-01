@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ConsoleNeetCode.RevisionOne.Trees;
 using NUnit.Framework;
 
@@ -141,5 +142,48 @@ public class BinarySearchTests
 
         // Assert
         Assert.AreEqual(3, result);
+    }
+    
+    [Test]
+    public void FindLargestBstInBinaryTree_ReturnsCorrectBstDsNode()
+    {
+        // Arrange
+        BinarySearchTree.BSTNode root = new BinarySearchTree.BSTNode(10);
+        root.Left = new BinarySearchTree.BSTNode(5);
+        root.Right = new BinarySearchTree.BSTNode(15);
+        root.Left.Left = new BinarySearchTree.BSTNode(3);
+        root.Left.Right = new BinarySearchTree.BSTNode(7);
+        root.Right.Left = new BinarySearchTree.BSTNode(12);
+        root.Right.Right = new BinarySearchTree.BSTNode(17);
+
+        // Act
+        BinarySearchTree.BstDsNode largestBstNode = BinarySearchTree.FindLargestBstInBinaryTree(root);
+
+        // Assert
+        Assert.AreEqual(7, largestBstNode.MaxSize);
+    }
+    
+    [Test]
+    public void PrintBoundaryTraversalInATree_ReturnsCorrectTraversal()
+    {
+        // Arrange
+        TreeRevision.TreeNodeRev root = new TreeRevision.TreeNodeRev(1);
+        root.Left = new TreeRevision.TreeNodeRev(2);
+        root.Right = new TreeRevision.TreeNodeRev(3);
+        root.Left.Left = new TreeRevision.TreeNodeRev(4);
+        root.Left.Right = new TreeRevision.TreeNodeRev(5);
+        root.Right.Left = new TreeRevision.TreeNodeRev(6);
+        root.Right.Right = new TreeRevision.TreeNodeRev(7);
+        root.Left.Left.Right = new TreeRevision.TreeNodeRev(8);
+        root.Left.Right.Left = new TreeRevision.TreeNodeRev(9);
+        root.Right.Right.Left = new TreeRevision.TreeNodeRev(10);
+
+        List<int> expectedTraversal = new List<int> { 1, 2, 4, 8, 9, 6, 10, 7 };
+
+        // Act
+        List<int> actualTraversal = TreeRevision.PrintBoundaryTraversalInATree(root);
+
+        // Assert
+        Assert.AreEqual(expectedTraversal, actualTraversal);
     }
 }

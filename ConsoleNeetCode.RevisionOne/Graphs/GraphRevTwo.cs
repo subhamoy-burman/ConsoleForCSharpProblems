@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace ConsoleNeetCode.RevisionOne.Graphs;
@@ -134,6 +135,57 @@ public static class GraphRevTwo
             }
         }
     }
-    
+
+    public class Pair
+    {
+        public int node;
+        public int distance;
+
+        public Pair(int distance, int node)
+        {
+            this.node = node;
+            this.distance = distance;
+        }
+    }
+
+    public static List<int> Dijkstra(int V, List<List<List<int>>> adjList, int source)
+    {
+        PriorityQueue<Pair, int> pq = new PriorityQueue<Pair, int>();
+        List<int> distances = new List<int>();
+        
+        // Initializing distTo list with a large number to
+        // indicate the nodes are unvisited initially.
+        // This list contains distance from source to the nodes.
+        for (int i = 0; i < V; i++)
+        {
+            distances.Add((int) (1e9));
+        }
+
+        distances[source] = 0;
+        pq.Enqueue(new Pair(0,source),0);
+
+        while (pq.Count!=0)
+        {
+            var currNode = pq.Dequeue();
+            int node = currNode.node;
+            int distance = currNode.distance;
+
+            for (int i = 0; i < adjList[node].Count; i++)
+            {
+                int edgeWeight = adjList[node][i][1];
+                int adjNode = adjList[node][i][0];
+
+                if ((distance + edgeWeight) < distances[adjNode])
+                {
+                    distances[adjNode] = distance + edgeWeight;
+                    pq.Enqueue(new Pair(distances[adjNode],adjNode),distances[adjNode]);
+                }
+            }
+        }
+
+        return distances;
+    }
+
+
     //public static bool CheckForCycle
 }
